@@ -1,9 +1,24 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+[gd_resource type="ShaderMaterial" load_steps=6 format=2]
 
 [ext_resource path="res://Shaders/TitleText.tres" type="Shader" id=1]
 
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+seamless = true
+noise = SubResource( 1 )
+
+[sub_resource type="OpenSimplexNoise" id=3]
+seed = 265
+
+[sub_resource type="NoiseTexture" id=4]
+seamless = true
+noise = SubResource( 3 )
+
 [resource]
 shader = ExtResource( 1 )
-shader_param/height = 3.0
-shader_param/frequency = 20.0
-shader_param/speed = 3.0
+shader_param/noiseStrength = 10.0
+shader_param/noiseSpeed = 1.0
+shader_param/noiseUpdateRate = 5.0
+shader_param/noiseX = SubResource( 2 )
+shader_param/noiseY = SubResource( 4 )

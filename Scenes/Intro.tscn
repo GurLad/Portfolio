@@ -29,6 +29,20 @@ margin_right = 1680.0
 margin_bottom = 57.0
 Text = "PORTFOLIO - GUR LADIZHINSKY"
 
+[node name="HBoxContainer" parent="VBoxContainer/Title2" index="0"]
+margin_left = 512.0
+margin_top = 0.0
+margin_right = 1168.0
+margin_bottom = 57.0
+
+[node name="Title" parent="VBoxContainer/Title2/HBoxContainer" index="1"]
+margin_right = 652.0
+text = "PORTFOLIO - GUR LADIZHINSKY"
+
+[node name="TextureRect2" parent="VBoxContainer/Title2/HBoxContainer" index="2"]
+margin_left = 656.0
+margin_right = 656.0
+
 [node name="Title" type="Label" parent="VBoxContainer"]
 visible = false
 material = ExtResource( 3 )
@@ -53,3 +67,5 @@ text = "Hello, and welcome to my portfolio! I’m a 21 years old CS student, and
 
 Most of my games were made in Unity, but I’ve experimented with other engines as well – Godot especially is one I’ve grown increasingly fond of. My favourite genres (and thus the ones I have the most experience with) are platformer, strategy, and RPG games, but I’m fine with any genre really (except ultra-violent ones). I love story-based games and modding/romhacking other games. "
 autowrap = true
+
+[editable path="VBoxContainer/Title2"]

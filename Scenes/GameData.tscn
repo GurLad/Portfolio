@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Textures/ClockTemp.png" type="Texture" id=2]
+[ext_resource path="res://Theme/Fonts/pointfree.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=4]
+[ext_resource path="res://Scripts/GameData.cs" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 3 )
+
+[node name="GameData" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 6
+theme = ExtResource( 1 )
+script = ExtResource( 5 )
+Text = "99 Months"
+pathLabel = NodePath("Text")
+pathNumber = NodePath("TextureRect/Number")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 64.0
+margin_bottom = 1280.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="Number" type="Label" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "99"
+align = 1
+valign = 1
+
+[node name="Text" type="Label" parent="."]
+material = ExtResource( 4 )
+margin_left = 68.0
+margin_top = 620.0
+margin_right = 170.0
+margin_bottom = 660.0
+custom_fonts/font = SubResource( 1 )
+text = "Months"

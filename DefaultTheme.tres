@@ -6,10 +6,10 @@
 [sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="StyleBoxTexture" id=2]
-content_margin_left = 7.0
-content_margin_right = 7.0
-content_margin_top = 7.0
-content_margin_bottom = 7.0
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 64, 64 )
 margin_left = 20.4952

@@ -8,7 +8,7 @@ public class Title : Node
     public string Text
     {
         get => label.Text;
-        set => label.Text = value;
+        set { if (Engine.EditorHint) label.Text = value; }
     }
     [Export]
     private NodePath pathLabel;

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Title.cs" type="Script" id=1]
+[ext_resource path="res://Theme/Fonts/pointfree.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="Title" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+Text = "whaterrorerror"
+pathLabel = NodePath("HBoxContainer/Title")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 788.0
+margin_top = 611.0
+margin_right = 1132.0
+margin_bottom = 668.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_bottom = 57.0
+
+[node name="Title" type="Label" parent="HBoxContainer"]
+material = ExtResource( 3 )
+margin_left = 4.0
+margin_right = 340.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 1 )
+text = "whaterrorerror"
+align = 1
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+margin_left = 344.0
+margin_right = 344.0
+margin_bottom = 57.0

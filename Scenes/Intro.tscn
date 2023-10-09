@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Theme/DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Theme/Fonts/pointfree.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
+[ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -21,10 +22,19 @@ margin_top = 20.0
 margin_right = 1700.0
 margin_bottom = 1260.0
 
-[node name="Title" type="Label" parent="VBoxContainer"]
-material = ExtResource( 3 )
+[node name="Title2" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 1680.0
 margin_bottom = 57.0
+Text = "PORTFOLIO - GUR LADIZHINSKY"
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+visible = false
+material = ExtResource( 3 )
+margin_top = 61.0
+margin_right = 1680.0
+margin_bottom = 118.0
 custom_fonts/font = SubResource( 1 )
 text = "PORTFOLIO - GUR LADIZHINSKY"
 align = 1

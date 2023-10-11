@@ -3,14 +3,16 @@
 [ext_resource path="res://Scripts/Title.cs" type="Script" id=1]
 [ext_resource path="res://Theme/PointHuge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
-[ext_resource path="res://Textures/Icons/Test2/0000.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Icons/Test/0002.png" type="Texture" id=4]
 
 [node name="Title" type="CenterContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 Text = "whaterrorerror"
-Icon = "Test2"
+Icon = "Test"
+iconOffset = 3
+noiseMaterial = ExtResource( 3 )
 pathLabel = NodePath("HBoxContainer/Title")
 pathIconL = NodePath("HBoxContainer/TextureRect")
 pathIconR = NodePath("HBoxContainer/TextureRect2")

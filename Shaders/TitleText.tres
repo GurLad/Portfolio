@@ -3,6 +3,7 @@
 [resource]
 code = "shader_type canvas_item;
 
+uniform float time;
 uniform float noiseStrength;
 uniform float noiseSpeed;
 uniform float noiseUpdateRate;
@@ -11,8 +12,8 @@ uniform sampler2D noiseY;
 
 void vertex() {
  //VERTEX.y += height * sin((frequency * UV.x) + (speed * TIME));
-	float time = floor(TIME * noiseUpdateRate) / noiseUpdateRate;//(floor(TIME * noiseUpdateRate) / noiseUpdateRate) * noiseSpeed;
-	vec2 pos = vec2(UV.x + time * noiseSpeed, UV.y + time * noiseSpeed);
+	float fixedTime = floor(time * noiseUpdateRate) / noiseUpdateRate;//(floor(TIME * noiseUpdateRate) / noiseUpdateRate) * noiseSpeed;
+	vec2 pos = vec2(UV.x + fixedTime * noiseSpeed, UV.y + fixedTime * noiseSpeed);
 	VERTEX.x += (texture(noiseX, pos).r - 0.5) * noiseStrength;
 	VERTEX.y += (texture(noiseY, pos).r - 0.5) * noiseStrength;
 }

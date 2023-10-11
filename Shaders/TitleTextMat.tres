@@ -17,6 +17,7 @@ noise = SubResource( 3 )
 
 [resource]
 shader = ExtResource( 1 )
+shader_param/time = 188.543
 shader_param/noiseStrength = 5.0
 shader_param/noiseSpeed = 1.0
 shader_param/noiseUpdateRate = 5.0

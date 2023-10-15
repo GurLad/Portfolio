@@ -30,6 +30,8 @@ public class GamePreview : PanelContainer
     public string Team { get => gameDatas[3].Text; set { if (Engine.EditorHint) gameDatas[3].Text = value; } }
     [Export(PropertyHint.MultilineText)]
     public string Description { get => description.Text; set { if (Engine.EditorHint) description.Text = value; } }
+    [Export]
+    public Color Color { get => background.SelfModulate; set { if (Engine.EditorHint) background.SelfModulate = value; } }
 
     [Export]
     private NodePath pathTitle;
@@ -43,4 +45,8 @@ public class GamePreview : PanelContainer
     private NodePath pathDescription;
     private Label _description = null;
     private Label description => _description ?? (_description = GetNode<Label>(pathDescription));
+    [Export]
+    private NodePath pathBackground;
+    private PanelContainer _background = null;
+    private PanelContainer background => _background ?? (_background = GetNode<PanelContainer>(pathBackground));
 }

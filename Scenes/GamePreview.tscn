@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Theme/PointLarge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Textures/Placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/GameData.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=5]
-[ext_resource path="res://Textures/Icons/Test3/0002.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Clock/0002.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/GamePreview.cs" type="Script" id=7]
+[ext_resource path="res://Textures/Icons/Test3/0002.png" type="Texture" id=8]
 
 [node name="GamePreview" type="PanelContainer"]
 anchor_right = 1.0
@@ -20,9 +21,11 @@ Date = "13 20XX"
 Time = "99 Decades"
 Team = "99 Pikmin"
 Description = "This game is totally awesome, check it out"
+Color = Color( 1, 1, 1, 1 )
 pathTitle = NodePath("VBoxContainer/Title")
 pathGameDatas = [ NodePath("VBoxContainer/HBoxContainer/EngineData"), NodePath("VBoxContainer/HBoxContainer/DateData"), NodePath("VBoxContainer/HBoxContainer2/TimeData"), NodePath("VBoxContainer/HBoxContainer2/TeamData") ]
 pathDescription = NodePath("VBoxContainer/Description")
+pathBackground = NodePath(".")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 20.0
@@ -77,7 +80,7 @@ IconName = "Test3"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/EngineData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 IconName = "Test3"
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/EngineData/TextureRect" index="0"]
@@ -99,6 +102,7 @@ Text = "13 20XX"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/DateData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "13"
@@ -130,6 +134,7 @@ Text = "99 Decades"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TimeData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_top = 12.0
@@ -147,6 +152,7 @@ Text = "99 Pikmin"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TeamData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TeamData" index="1"]
 margin_top = 12.0

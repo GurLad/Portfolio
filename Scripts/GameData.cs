@@ -24,7 +24,7 @@ public class GameData : HBoxContainer
         }
     }
     [Export]
-    public string IconName { get => icon.IconName; set => icon.IconName = value; }
+    public string IconName { get => icon.IconName; set { if (Engine.EditorHint) icon.IconName = value; } }
     [Export]
     private NodePath pathLabel;
     private Label _label = null;

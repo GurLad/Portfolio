@@ -1,17 +1,28 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Theme/PointLarge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Textures/Placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/GameData.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=5]
-[ext_resource path="res://Textures/Icons/Clock/0004.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Test3/0002.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/GamePreview.cs" type="Script" id=7]
 
 [node name="GamePreview" type="PanelContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 6
 theme = ExtResource( 1 )
+script = ExtResource( 7 )
+GameName = "whaterrorerror"
+EngineName = "Test3"
+Date = "13 20XX"
+Time = "99 Decades"
+Team = "99 Pikmin"
+Description = "This game is totally awesome, check it out"
+pathTitle = NodePath("VBoxContainer/Title")
+pathGameDatas = [ NodePath("VBoxContainer/HBoxContainer/EngineData"), NodePath("VBoxContainer/HBoxContainer/DateData"), NodePath("VBoxContainer/HBoxContainer2/TimeData"), NodePath("VBoxContainer/HBoxContainer2/TeamData") ]
+pathDescription = NodePath("VBoxContainer/Description")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 20.0
@@ -22,36 +33,38 @@ margin_bottom = 1260.0
 [node name="Title" type="Label" parent="VBoxContainer"]
 material = ExtResource( 5 )
 margin_right = 1880.0
-margin_bottom = 57.0
+margin_bottom = 117.0
+rect_min_size = Vector2( 0, 117 )
 custom_fonts/font = ExtResource( 2 )
 text = "whaterrorerror"
 align = 1
+valign = 1
 
 [node name="Sep" type="TextureRect" parent="VBoxContainer"]
-margin_top = 61.0
+margin_top = 121.0
 margin_right = 1880.0
-margin_bottom = 66.0
+margin_bottom = 126.0
 rect_min_size = Vector2( 0, 5 )
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-margin_top = 70.0
+margin_top = 130.0
 margin_right = 1880.0
-margin_bottom = 450.0
+margin_bottom = 510.0
 rect_min_size = Vector2( 475, 380 )
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
 
 [node name="Sep2" type="TextureRect" parent="VBoxContainer"]
-margin_top = 454.0
+margin_top = 514.0
 margin_right = 1880.0
-margin_bottom = 459.0
+margin_bottom = 519.0
 rect_min_size = Vector2( 0, 5 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 463.0
+margin_top = 523.0
 margin_right = 1880.0
-margin_bottom = 527.0
+margin_bottom = 587.0
 
 [node name="EngineData" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
@@ -59,11 +72,13 @@ anchor_bottom = 0.0
 margin_left = 369.0
 margin_right = 569.0
 margin_bottom = 64.0
-Text = " Godot"
+Text = " Test3"
+IconName = "Test3"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/EngineData" index="0"]
 margin_bottom = 64.0
 texture = ExtResource( 6 )
+IconName = "Test3"
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/EngineData/TextureRect" index="0"]
 text = ""
@@ -72,7 +87,7 @@ text = ""
 margin_top = 12.0
 margin_right = 153.0
 margin_bottom = 52.0
-text = "Godot"
+text = "Test3"
 
 [node name="DateData" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
@@ -80,31 +95,30 @@ anchor_bottom = 0.0
 margin_left = 1311.0
 margin_right = 1511.0
 margin_bottom = 64.0
-Text = "Oct 2023"
+Text = "13 20XX"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/DateData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 6 )
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
-text = "Oct"
+text = "13"
 
 [node name="Text" parent="VBoxContainer/HBoxContainer/DateData" index="1"]
 margin_top = 12.0
 margin_right = 136.0
 margin_bottom = 52.0
-text = "2023"
+text = "20XX"
 
 [node name="Sep3" type="TextureRect" parent="VBoxContainer"]
-margin_top = 531.0
+margin_top = 591.0
 margin_right = 1880.0
-margin_bottom = 536.0
+margin_bottom = 596.0
 rect_min_size = Vector2( 0, 5 )
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 540.0
+margin_top = 600.0
 margin_right = 1880.0
-margin_bottom = 604.0
+margin_bottom = 664.0
 
 [node name="TimeData" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
 anchor_right = 0.0
@@ -112,14 +126,16 @@ anchor_bottom = 0.0
 margin_left = 369.0
 margin_right = 569.0
 margin_bottom = 64.0
+Text = "99 Decades"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TimeData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 6 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_top = 12.0
+margin_right = 187.0
 margin_bottom = 52.0
+text = "Decades"
 
 [node name="TeamData" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
 anchor_right = 0.0
@@ -127,27 +143,26 @@ anchor_bottom = 0.0
 margin_left = 1311.0
 margin_right = 1511.0
 margin_bottom = 64.0
-Text = "99 People"
+Text = "99 Pikmin"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TeamData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 6 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TeamData" index="1"]
 margin_top = 12.0
 margin_bottom = 52.0
-text = "People"
+text = "Pikmin"
 
 [node name="Sep4" type="TextureRect" parent="VBoxContainer"]
-margin_top = 608.0
+margin_top = 668.0
 margin_right = 1880.0
-margin_bottom = 613.0
+margin_bottom = 673.0
 rect_min_size = Vector2( 0, 5 )
 
-[node name="Text" type="Label" parent="VBoxContainer"]
-margin_top = 617.0
+[node name="Description" type="Label" parent="VBoxContainer"]
+margin_top = 677.0
 margin_right = 1880.0
-margin_bottom = 642.0
+margin_bottom = 702.0
 text = "This game is totally awesome, check it out"
 autowrap = true
 

@@ -24,6 +24,8 @@ public class GameData : HBoxContainer
         }
     }
     [Export]
+    public string IconName { get => icon.IconName; set => icon.IconName = value; }
+    [Export]
     private NodePath pathLabel;
     private Label _label = null;
     private Label label => _label ?? (_label = GetNode<Label>(pathLabel));
@@ -31,4 +33,8 @@ public class GameData : HBoxContainer
     private NodePath pathNumber;
     private Label _number = null;
     private Label number => _number ?? (_number = GetNode<Label>(pathNumber));
+    [Export]
+    private NodePath pathIcon;
+    private Icon _icon = null;
+    private Icon icon => _icon ?? (_icon = GetNode<Icon>(pathIcon));
 }

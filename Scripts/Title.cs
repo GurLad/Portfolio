@@ -12,7 +12,11 @@ public class Title : Node
         set { if (Engine.EditorHint) label.Text = value; }
     }
     [Export]
-    public string Icon;
+    public string Icon
+    {
+        get => iconL.IconName;
+        set { if (Engine.EditorHint) iconL.IconName = iconR.IconName = value; }
+    }
     [Export]
     private NodePath pathLabel;
     [Export]

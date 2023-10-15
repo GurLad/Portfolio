@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Theme/PointLarge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Textures/Placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/GameData.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=5]
+[ext_resource path="res://Textures/Icons/Clock/0004.png" type="Texture" id=6]
 
 [node name="GamePreview" type="PanelContainer"]
 anchor_right = 1.0
@@ -62,6 +63,7 @@ Text = " Godot"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/EngineData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/EngineData/TextureRect" index="0"]
 text = ""
@@ -82,6 +84,7 @@ Text = "Oct 2023"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/DateData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Oct"
@@ -112,6 +115,7 @@ margin_bottom = 64.0
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TimeData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_top = 12.0
@@ -127,6 +131,7 @@ Text = "99 People"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TeamData" index="0"]
 margin_bottom = 64.0
+texture = ExtResource( 6 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TeamData" index="1"]
 margin_top = 12.0

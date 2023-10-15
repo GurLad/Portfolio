@@ -14,6 +14,10 @@ config/name="Portfolio"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+AnimationController="*res://Scenes/AnimationController.tscn"
+
 [display]
 
 window/size/width=1920

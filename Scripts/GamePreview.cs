@@ -27,7 +27,18 @@ public class GamePreview : PanelContainer
     [Export]
     public string Time { get => gameDatas[2].Text; set { if (Engine.EditorHint) gameDatas[2].Text = value; } }
     [Export]
-    public string Team { get => gameDatas[3].Text; set { if (Engine.EditorHint) gameDatas[3].Text = value; } }
+    public string Team
+    {
+        get => gameDatas[3].Text;
+        set
+        {
+            if (Engine.EditorHint)
+            {
+                gameDatas[3].Text = value;
+                gameDatas[3].IconName = value.Contains("1 ") ? "Solo" : "Team";
+            }
+        }
+    }
     [Export(PropertyHint.MultilineText)]
     public string Description { get => description.Text; set { if (Engine.EditorHint) description.Text = value; } }
     [Export]

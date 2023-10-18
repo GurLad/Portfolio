@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Intro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=2]
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GamePreview.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Textures/Icons/Test3/0004.png" type="Texture" id=5]
-[ext_resource path="res://Textures/Icons/Solo/0004.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Test3/0001.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Icons/Clock/0001.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Team/0001.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Icons/Solo/0001.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Icons/Date/0001.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Icons/Unity/0001.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Icons/Godot/0001.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Icons/Heaps.io/0001.png" type="Texture" id=12]
 
 [node name="Index" type="VBoxContainer"]
 margin_left = 100.0
@@ -28,44 +34,44 @@ margin_top = 75.0
 margin_right = 1708.0
 margin_bottom = 384.0
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Highlights" type="PanelContainer" parent="."]
 self_modulate = Color( 1, 1, 0.921569, 1 )
 margin_top = 434.0
 margin_right = 1708.0
 margin_bottom = 1485.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1688.0
 margin_bottom = 1031.0
 
-[node name="Title" parent="PanelContainer/VBoxContainer" instance=ExtResource( 3 )]
+[node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1668.0
 margin_bottom = 71.0
 Text = "Highlights"
 
-[node name="HBoxContainer" parent="PanelContainer/VBoxContainer/Title" index="0"]
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
 margin_left = 616.0
 margin_top = 0.0
 margin_right = 1052.0
 margin_bottom = 71.0
 
-[node name="IconL" parent="PanelContainer/VBoxContainer/Title/HBoxContainer" index="0"]
+[node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
 texture = ExtResource( 5 )
 
-[node name="Title" parent="PanelContainer/VBoxContainer/Title/HBoxContainer" index="1"]
+[node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
 margin_right = 368.0
 text = "Highlights"
 
-[node name="IconR" parent="PanelContainer/VBoxContainer/Title/HBoxContainer" index="2"]
+[node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
 margin_left = 372.0
 margin_right = 436.0
 texture = ExtResource( 5 )
 
-[node name="Text" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="Highlights/VBoxContainer"]
 margin_top = 75.0
 margin_right = 1668.0
 margin_bottom = 125.0
@@ -75,12 +81,12 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer"]
 margin_top = 129.0
 margin_right = 1668.0
 margin_bottom = 1011.0
 
-[node name="GamePreview" parent="PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="FrogmanMagmaborn" parent="Highlights/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
 self_modulate = Color( 0.811765, 1, 0.439216, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -88,6 +94,7 @@ margin_left = 19.0
 margin_right = 534.0
 margin_bottom = 882.0
 GameName = "Frogman Magmaborn"
+EngineName = "Unity"
 Date = "Oct 2023"
 Time = "~3 Years"
 Team = "1+ Solo+"
@@ -95,81 +102,99 @@ Description = "Frogman Magmaborn was my largest project to date – an open-sour
 In addition to the game itself, I’ve also created a modding tool in WinForms called Frog Forge, which was also used to create the game itself."
 Color = Color( 0.811765, 1, 0.439216, 1 )
 
-[node name="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview" index="0"]
+[node name="VBoxContainer" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn" index="0"]
 margin_right = 495.0
 margin_bottom = 862.0
 
-[node name="Title" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="0"]
+[node name="Title" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="0"]
 margin_right = 475.0
 text = "Frogman Magmaborn"
 
-[node name="Sep" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="1"]
+[node name="Sep" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="1"]
 margin_right = 475.0
 
-[node name="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="2"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="2"]
 margin_right = 475.0
 
-[node name="Sep2" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="3"]
+[node name="Sep2" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="3"]
 margin_right = 475.0
 
-[node name="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="4"]
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="4"]
 margin_right = 475.0
 
-[node name="EngineData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer" index="0"]
+[node name="EngineData" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer" index="0"]
 margin_left = 17.0
 margin_right = 217.0
+Text = " Unity"
+IconName = "Unity"
 
-[node name="DateData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer" index="1"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/EngineData" index="0"]
+texture = ExtResource( 10 )
+IconName = "Unity"
+
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/EngineData" index="1"]
+text = "Unity"
+
+[node name="DateData" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer" index="1"]
 margin_left = 257.0
 margin_right = 457.0
 Text = "Oct 2023"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/DateData" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Oct"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer/DateData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/DateData" index="1"]
 text = "2023"
 
-[node name="Sep3" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="5"]
+[node name="Sep3" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="5"]
 margin_right = 475.0
 
-[node name="HBoxContainer2" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="6"]
+[node name="HBoxContainer2" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="6"]
 margin_right = 475.0
 
-[node name="TimeData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2" index="0"]
+[node name="TimeData" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2" index="0"]
 margin_left = 17.0
 margin_right = 217.0
 Text = "~3 Years"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TimeData" index="0"]
+texture = ExtResource( 6 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "~3"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2/TimeData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_right = 153.0
 text = "Years"
 
-[node name="TeamData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2" index="1"]
+[node name="TeamData" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2" index="1"]
 margin_left = 257.0
 margin_right = 457.0
 Text = "1+ Solo+"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TeamData" index="0"]
+texture = ExtResource( 7 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
 text = "1+"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2/TeamData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TeamData" index="1"]
 margin_right = 153.0
 text = "Solo+"
 
-[node name="Sep4" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="7"]
+[node name="Sep4" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="7"]
 margin_right = 475.0
 
-[node name="Description" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer" index="8"]
+[node name="Description" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer" index="8"]
 margin_right = 475.0
 margin_bottom = 842.0
 text = "Frogman Magmaborn was my largest project to date – an open-source rogue-like story-based tactical RPG.
 In addition to the game itself, I’ve also created a modding tool in WinForms called Frog Forge, which was also used to create the game itself."
 
-[node name="GamePreview2" parent="PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="CursedVest" parent="Highlights/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
 self_modulate = Color( 1, 0.709804, 0.439216, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -178,6 +203,7 @@ margin_right = 1091.0
 margin_bottom = 882.0
 GameName = "The Cursed Vest of
 Soul Harvesting"
+EngineName = "Godot"
 Date = "Jan 2023"
 Time = "2 Days"
 Team = "1 Solo"
@@ -185,87 +211,102 @@ Description = "This game features the best protagonist I’ve ever made – a mi
 It was made for Ludum Dare 52 Compo, and was my 8th Ludum Dare entry. "
 Color = Color( 1, 0.709804, 0.439216, 1 )
 
-[node name="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2" index="0"]
+[node name="VBoxContainer" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest" index="0"]
 margin_right = 495.0
 margin_bottom = 862.0
 
-[node name="Title" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="0"]
+[node name="Title" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="0"]
 margin_right = 475.0
 text = "The Cursed Vest of
 Soul Harvesting"
 
-[node name="Sep" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="1"]
+[node name="Sep" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="1"]
 margin_right = 475.0
 
-[node name="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="2"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="2"]
 margin_right = 475.0
 
-[node name="Sep2" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="3"]
+[node name="Sep2" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="3"]
 margin_right = 475.0
 
-[node name="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="4"]
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="4"]
 margin_right = 475.0
 
-[node name="EngineData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer" index="0"]
+[node name="EngineData" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer" index="0"]
 margin_left = 17.0
 margin_right = 217.0
+Text = " Godot"
+IconName = "Godot"
 
-[node name="DateData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer" index="1"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/EngineData" index="0"]
+texture = ExtResource( 11 )
+IconName = "Godot"
+
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/EngineData" index="1"]
+text = "Godot"
+
+[node name="DateData" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer" index="1"]
 margin_left = 257.0
 margin_right = 457.0
 Text = "Jan 2023"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/DateData" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Jan"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer/DateData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/DateData" index="1"]
 text = "2023"
 
-[node name="Sep3" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="5"]
+[node name="Sep3" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="5"]
 margin_right = 475.0
 
-[node name="HBoxContainer2" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="6"]
+[node name="HBoxContainer2" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="6"]
 margin_right = 475.0
 
-[node name="TimeData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2" index="0"]
+[node name="TimeData" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2" index="0"]
 margin_left = 17.0
 margin_right = 217.0
 Text = "2 Days"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TimeData" index="0"]
+texture = ExtResource( 6 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "2"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TimeData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_right = 136.0
 text = "Days"
 
-[node name="TeamData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2" index="1"]
+[node name="TeamData" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2" index="1"]
 margin_left = 257.0
 margin_right = 457.0
 Text = "1 Solo"
 IconName = "Solo"
 
-[node name="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 6 )
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TeamData" index="0"]
+texture = ExtResource( 8 )
 IconName = "Solo"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
 text = "1"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TeamData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TeamData" index="1"]
 margin_right = 136.0
 text = "Solo"
 
-[node name="Sep4" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="7"]
+[node name="Sep4" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="7"]
 margin_right = 475.0
 
-[node name="Description" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer" index="8"]
+[node name="Description" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer" index="8"]
 margin_right = 475.0
 margin_bottom = 842.0
 text = "This game features the best protagonist I’ve ever made – a mind-controlling vest. It’s a puzzle game where you need to climb a tower by possessing different kinds of monsters.
 It was made for Ludum Dare 52 Compo, and was my 8th Ludum Dare entry. "
 
-[node name="GamePreview3" parent="PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="SpaceEel" parent="Highlights/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
 self_modulate = Color( 0.760784, 0.760784, 0.819608, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -274,103 +315,517 @@ margin_right = 1648.0
 margin_bottom = 882.0
 GameName = "Medieval Space
 Eel Collectors"
+EngineName = "Unity"
 Date = "Nov 2022"
 Time = "8 Hours"
 Team = "3 People"
 Description = "During my student exchange semester in Berlin, I participated in two Berlin Mini Jams, where we had to make a game in only 8 hours in teams. This game was my second one, made for the themes of Recycle, Medieval Space Traveling and Electric Eels. "
 Color = Color( 0.760784, 0.760784, 0.819608, 1 )
 
-[node name="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3" index="0"]
+[node name="VBoxContainer" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel" index="0"]
 margin_right = 495.0
 margin_bottom = 862.0
 
-[node name="Title" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="0"]
+[node name="Title" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="0"]
 margin_right = 475.0
 text = "Medieval Space
 Eel Collectors"
 
-[node name="Sep" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="1"]
+[node name="Sep" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="1"]
 margin_right = 475.0
 
-[node name="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="2"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="2"]
 margin_right = 475.0
 
-[node name="Sep2" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="3"]
+[node name="Sep2" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="3"]
 margin_right = 475.0
 
-[node name="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="4"]
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="4"]
 margin_right = 475.0
 
-[node name="EngineData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer" index="0"]
+[node name="EngineData" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer" index="0"]
 margin_left = 17.0
 margin_right = 217.0
+Text = " Unity"
+IconName = "Unity"
 
-[node name="DateData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer" index="1"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData" index="0"]
+texture = ExtResource( 10 )
+IconName = "Unity"
+
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData" index="1"]
+text = "Unity"
+
+[node name="DateData" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer" index="1"]
 margin_left = 257.0
 margin_right = 457.0
 Text = "Nov 2022"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Nov"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer/DateData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData" index="1"]
 text = "2022"
 
-[node name="Sep3" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="5"]
+[node name="Sep3" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="5"]
 margin_right = 475.0
 
-[node name="HBoxContainer2" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="6"]
+[node name="HBoxContainer2" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="6"]
 margin_right = 475.0
 
-[node name="TimeData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2" index="0"]
+[node name="TimeData" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2" index="0"]
 margin_left = 17.0
 margin_right = 217.0
 Text = "8 Hours"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData" index="0"]
+texture = ExtResource( 6 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "8"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2/TimeData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_right = 153.0
 text = "Hours"
 
-[node name="TeamData" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2" index="1"]
+[node name="TeamData" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2" index="1"]
 margin_left = 257.0
 margin_right = 457.0
 Text = "3 People"
 
-[node name="Number" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
+[node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData" index="0"]
+texture = ExtResource( 7 )
+
+[node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
 text = "3"
 
-[node name="Text" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2/TeamData" index="1"]
+[node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData" index="1"]
 text = "People"
 
-[node name="Sep4" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="7"]
+[node name="Sep4" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="7"]
 margin_right = 475.0
 
-[node name="Description" parent="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer" index="8"]
+[node name="Description" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="8"]
+margin_right = 475.0
+margin_bottom = 842.0
+text = "During my student exchange semester in Berlin, I participated in two Berlin Mini Jams, where we had to make a game in only 8 hours in teams. This game was my second one, made for the themes of Recycle, Medieval Space Traveling and Electric Eels. "
+
+[node name="OlderStuff" type="PanelContainer" parent="."]
+self_modulate = Color( 1, 1, 0.921569, 1 )
+margin_top = 1535.0
+margin_right = 1708.0
+margin_bottom = 2586.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OlderStuff"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1688.0
+margin_bottom = 1031.0
+
+[node name="Title" parent="OlderStuff/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1668.0
+margin_bottom = 71.0
+Text = "More Projects"
+
+[node name="HBoxContainer" parent="OlderStuff/VBoxContainer/Title" index="0"]
+margin_left = 571.0
+margin_top = 0.0
+margin_right = 1097.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="OlderStuff/VBoxContainer/Title/HBoxContainer" index="0"]
+texture = ExtResource( 5 )
+
+[node name="Title" parent="OlderStuff/VBoxContainer/Title/HBoxContainer" index="1"]
+margin_right = 458.0
+text = "More Projects"
+
+[node name="IconR" parent="OlderStuff/VBoxContainer/Title/HBoxContainer" index="2"]
+margin_left = 462.0
+margin_right = 526.0
+texture = ExtResource( 5 )
+
+[node name="Text" type="Label" parent="OlderStuff/VBoxContainer"]
+margin_top = 75.0
+margin_right = 1668.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 0, 50 )
+text = "Slightly older games which I'm still proud of"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OlderStuff/VBoxContainer"]
+margin_top = 129.0
+margin_right = 1668.0
+margin_bottom = 1011.0
+
+[node name="ProjectClimb" parent="OlderStuff/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+self_modulate = Color( 0.7, 1, 0.945, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 158.0
+margin_right = 673.0
+margin_bottom = 882.0
+GameName = "Project Climb"
+EngineName = "Heaps.io"
+Date = "Jun 2021"
+Time = "1 Month"
+Team = "1 Solo"
+Description = "After using Unity for 5 years already by this point, I wanted to try out other engines and programming languages, so I set out to study Haxe & Heaps.io while making a game using them, in only one month. The result isn’t spectacular, but I learned a lot from working on it."
+Color = Color( 0.7, 1, 0.945, 1 )
+
+[node name="VBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb" index="0"]
+margin_right = 495.0
+margin_bottom = 862.0
+
+[node name="Title" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="0"]
+margin_right = 475.0
+text = "Project Climb"
+
+[node name="Sep" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="1"]
+margin_right = 475.0
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="2"]
+margin_right = 475.0
+
+[node name="Sep2" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="3"]
+margin_right = 475.0
+
+[node name="HBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="4"]
+margin_right = 475.0
+
+[node name="EngineData" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 15.0
+margin_right = 219.0
+Text = " Heaps.io"
+IconName = "Heaps.io"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/EngineData" index="0"]
+texture = ExtResource( 12 )
+IconName = "Heaps.io"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/EngineData" index="1"]
+margin_right = 204.0
+text = "Heaps.io"
+
+[node name="DateData" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 257.0
+margin_right = 457.0
+Text = "Jun 2021"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/DateData" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
+text = "Jun"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/DateData" index="1"]
+text = "2021"
+
+[node name="Sep3" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="5"]
+margin_right = 475.0
+
+[node name="HBoxContainer2" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="6"]
+margin_right = 475.0
+
+[node name="TimeData" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2" index="0"]
+margin_left = 17.0
+margin_right = 217.0
+Text = "1 Month"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TimeData" index="0"]
+texture = ExtResource( 6 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
+text = "1"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TimeData" index="1"]
+margin_right = 153.0
+text = "Month"
+
+[node name="TeamData" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2" index="1"]
+margin_left = 257.0
+margin_right = 457.0
+Text = "1 Solo"
+IconName = "Solo"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TeamData" index="0"]
+texture = ExtResource( 8 )
+IconName = "Solo"
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
+text = "1"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TeamData" index="1"]
+margin_right = 136.0
+text = "Solo"
+
+[node name="Sep4" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="7"]
+margin_right = 475.0
+
+[node name="Description" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer" index="8"]
+margin_right = 475.0
+margin_bottom = 842.0
+text = "After using Unity for 5 years already by this point, I wanted to try out other engines and programming languages, so I set out to study Haxe & Heaps.io while making a game using them, in only one month. The result isn’t spectacular, but I learned a lot from working on it."
+
+[node name="GBP1" parent="OlderStuff/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+self_modulate = Color( 1, 0.894118, 0.470588, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 994.0
+margin_right = 1509.0
+margin_bottom = 882.0
+GameName = "Gravity Banana:
+Part 1"
+EngineName = "Unity"
+Date = "Jan 2019"
+Time = "~1 Year"
+Team = "1+ Solo+"
+Description = "Gravity Banana is an action-platformer game where you play as a gravity-changing banana which throws exploding chilli peppers at pickles.
+I made most of it, but my friend Dan created all the characters & concept art, and a few other friends helped with the music and voice acting."
+Color = Color( 1, 0.894118, 0.470588, 1 )
+
+[node name="VBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1" index="0"]
+margin_right = 495.0
+margin_bottom = 862.0
+
+[node name="Title" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="0"]
+margin_right = 475.0
+text = "Gravity Banana:
+Part 1"
+
+[node name="Sep" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="1"]
+margin_right = 475.0
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="2"]
+margin_right = 475.0
+
+[node name="Sep2" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="3"]
+margin_right = 475.0
+
+[node name="HBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="4"]
+margin_right = 475.0
+
+[node name="EngineData" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 17.0
+margin_right = 217.0
+Text = " Unity"
+IconName = "Unity"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/EngineData" index="0"]
+texture = ExtResource( 10 )
+IconName = "Unity"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/EngineData" index="1"]
+text = "Unity"
+
+[node name="DateData" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 257.0
+margin_right = 457.0
+Text = "Jan 2019"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/DateData" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
+text = "Jan"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/DateData" index="1"]
+text = "2019"
+
+[node name="Sep3" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="5"]
+margin_right = 475.0
+
+[node name="HBoxContainer2" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="6"]
+margin_right = 475.0
+
+[node name="TimeData" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2" index="0"]
+margin_left = 17.0
+margin_right = 217.0
+Text = "~1 Year"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TimeData" index="0"]
+texture = ExtResource( 6 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
+text = "~1"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TimeData" index="1"]
+margin_right = 136.0
+text = "Year"
+
+[node name="TeamData" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2" index="1"]
+margin_left = 257.0
+margin_right = 457.0
+Text = "1+ Solo+"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TeamData" index="0"]
+texture = ExtResource( 7 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
+text = "1+"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TeamData" index="1"]
+margin_right = 153.0
+text = "Solo+"
+
+[node name="Sep4" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="7"]
+margin_right = 475.0
+
+[node name="Description" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="8"]
+margin_right = 475.0
+margin_bottom = 842.0
+text = "Gravity Banana is an action-platformer game where you play as a gravity-changing banana which throws exploding chilli peppers at pickles.
+I made most of it, but my friend Dan created all the characters & concept art, and a few other friends helped with the music and voice acting."
+
+[node name="SpaceEel" parent="OlderStuff/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+visible = false
+self_modulate = Color( 0.760784, 0.760784, 0.819608, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1133.0
+margin_right = 1648.0
+margin_bottom = 882.0
+GameName = "Medieval Space
+Eel Collectors"
+EngineName = "Unity"
+Date = "Nov 2022"
+Time = "8 Hours"
+Team = "3 People"
+Description = "During my student exchange semester in Berlin, I participated in two Berlin Mini Jams, where we had to make a game in only 8 hours in teams. This game was my second one, made for the themes of Recycle, Medieval Space Traveling and Electric Eels. "
+Color = Color( 0.760784, 0.760784, 0.819608, 1 )
+
+[node name="VBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel" index="0"]
+margin_right = 495.0
+margin_bottom = 862.0
+
+[node name="Title" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="0"]
+margin_right = 475.0
+text = "Medieval Space
+Eel Collectors"
+
+[node name="Sep" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="1"]
+margin_right = 475.0
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="2"]
+margin_right = 475.0
+
+[node name="Sep2" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="3"]
+margin_right = 475.0
+
+[node name="HBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="4"]
+margin_right = 475.0
+
+[node name="EngineData" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 17.0
+margin_right = 217.0
+Text = " Unity"
+IconName = "Unity"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData" index="0"]
+texture = ExtResource( 10 )
+IconName = "Unity"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData" index="1"]
+text = "Unity"
+
+[node name="DateData" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 257.0
+margin_right = 457.0
+Text = "Nov 2022"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
+text = "Nov"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData" index="1"]
+text = "2022"
+
+[node name="Sep3" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="5"]
+margin_right = 475.0
+
+[node name="HBoxContainer2" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="6"]
+margin_right = 475.0
+
+[node name="TimeData" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2" index="0"]
+margin_left = 17.0
+margin_right = 217.0
+Text = "8 Hours"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData" index="0"]
+texture = ExtResource( 6 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
+text = "8"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData" index="1"]
+margin_right = 153.0
+text = "Hours"
+
+[node name="TeamData" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2" index="1"]
+margin_left = 257.0
+margin_right = 457.0
+Text = "3 People"
+
+[node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData" index="0"]
+texture = ExtResource( 7 )
+
+[node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
+text = "3"
+
+[node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData" index="1"]
+text = "People"
+
+[node name="Sep4" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="7"]
+margin_right = 475.0
+
+[node name="Description" parent="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer" index="8"]
 margin_right = 475.0
 margin_bottom = 842.0
 text = "During my student exchange semester in Berlin, I participated in two Berlin Mini Jams, where we had to make a game in only 8 hours in teams. This game was my second one, made for the themes of Recycle, Medieval Space Traveling and Electric Eels. "
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 1535.0
+margin_top = 2636.0
 margin_right = 1708.0
-margin_bottom = 1560.0
+margin_bottom = 2661.0
 
-[editable path="PanelContainer/VBoxContainer/Title"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer/EngineData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer/DateData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2/TimeData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview/VBoxContainer/HBoxContainer2/TeamData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer/EngineData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer/DateData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TimeData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview2/VBoxContainer/HBoxContainer2/TeamData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer/EngineData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer/DateData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2/TimeData"]
-[editable path="PanelContainer/VBoxContainer/HBoxContainer/GamePreview3/VBoxContainer/HBoxContainer2/TeamData"]
+[editable path="Highlights/VBoxContainer/Title"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/EngineData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/DateData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TimeData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TeamData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/CursedVest"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/EngineData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/DateData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TimeData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TeamData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/SpaceEel"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData"]
+[editable path="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData"]
+[editable path="OlderStuff/VBoxContainer/Title"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/EngineData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/DateData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TimeData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TeamData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/GBP1"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/EngineData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/DateData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TimeData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TeamData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData"]
+[editable path="OlderStuff/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData"]

@@ -1,0 +1,22 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform float minDist;
+uniform float centre : hint_range(0.0, 0.5);
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	float aspect = TEXTURE_PIXEL_SIZE.x / TEXTURE_PIXEL_SIZE.y;
+	float diffPercent = 0.5 * (1.0 / TEXTURE_PIXEL_SIZE.x - 1.0 / TEXTURE_PIXEL_SIZE.y) / (1.0 / TEXTURE_PIXEL_SIZE.x);
+	vec2 uvFromCentre = vec2(UV.x - 0.5, UV.y - 0.5);
+	uvFromCentre.x = sign(uvFromCentre.x) * 0.5 * max(0, abs(uvFromCentre.x) - diffPercent) / (0.5 - diffPercent);
+	vec2 absUV = vec2(abs(uvFromCentre.x), abs(uvFromCentre.y));
+	float inCircles = 1.0 - max(0.0, sign(absUV.x - (0.5 - centre))) * max(0.0, sign(absUV.y - (0.5 - centre)));
+	//float dist = sqrt(pow(absUV.x - centre, 2) + pow(absUV.y  - centre, 2));
+	float dist = sqrt(pow(absUV.x - (0.5 - centre), 2) + pow(absUV.y - (0.5 - centre), 2));
+	float outsideCircles = 1.0 - max(0, sign(dist - centre)); //max(0, sign(minDist - dist)
+	COLOR.a = max(inCircles, outsideCircles);
+}
+"

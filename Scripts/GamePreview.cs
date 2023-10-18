@@ -8,7 +8,7 @@ public class GamePreview : PanelContainer
     [Export(PropertyHint.MultilineText)]
     public string GameName { get => title.Text; set { if (Engine.EditorHint) title.Text = value; } }
     [Export]
-    public Texture Image; // TBA
+    public Texture Image { get => thumbnail.Texture; set { if (Engine.EditorHint) thumbnail.Texture = value; } }
     [Export]
     public string EngineName
     {
@@ -60,4 +60,8 @@ public class GamePreview : PanelContainer
     private NodePath pathBackground;
     private PanelContainer _background = null;
     private PanelContainer background => _background ?? (_background = GetNode<PanelContainer>(pathBackground));
+    [Export]
+    private NodePath pathThumbnail;
+    private TextureRect _thumbnail = null;
+    private TextureRect thumbnail => _thumbnail ?? (_thumbnail = GetNode<TextureRect>(pathThumbnail));
 }

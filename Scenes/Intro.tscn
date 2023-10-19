@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Theme/DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Theme/Fonts/pointfree.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Textures/Icons/Test3/0003.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -26,22 +27,26 @@ margin_bottom = 1260.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1680.0
-margin_bottom = 57.0
+margin_bottom = 71.0
 Text = "PORTFOLIO - GUR LADIZHINSKY"
 
 [node name="HBoxContainer" parent="VBoxContainer/Title2" index="0"]
-margin_left = 512.0
+margin_left = 367.0
 margin_top = 0.0
-margin_right = 1168.0
-margin_bottom = 57.0
+margin_right = 1313.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="VBoxContainer/Title2/HBoxContainer" index="0"]
+texture = ExtResource( 5 )
 
 [node name="Title" parent="VBoxContainer/Title2/HBoxContainer" index="1"]
-margin_right = 652.0
+margin_right = 878.0
 text = "PORTFOLIO - GUR LADIZHINSKY"
 
-[node name="TextureRect2" parent="VBoxContainer/Title2/HBoxContainer" index="2"]
-margin_left = 656.0
-margin_right = 656.0
+[node name="IconR" parent="VBoxContainer/Title2/HBoxContainer" index="2"]
+margin_left = 882.0
+margin_right = 946.0
+texture = ExtResource( 5 )
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 visible = false
@@ -54,18 +59,20 @@ text = "PORTFOLIO - GUR LADIZHINSKY"
 align = 1
 
 [node name="Seperator" type="Label" parent="VBoxContainer"]
-margin_top = 61.0
+margin_top = 75.0
 margin_right = 1680.0
-margin_bottom = 86.0
+margin_bottom = 100.0
 align = 1
 
 [node name="Text" type="Label" parent="VBoxContainer"]
-margin_top = 90.0
+margin_top = 104.0
 margin_right = 1680.0
-margin_bottom = 255.0
-text = "Hello, and welcome to my portfolio! I’m a 21 years old CS student, and I’ve been making games as a hobby for around 9 years now. This portfolio will highlight my favourite ones.
+margin_bottom = 241.0
+text = "I make video games. Most of them are weird. Some are hopefully fun.
+Have some dates: I was born in 2002. Published my first \"game\" in 2014. Began using Unity in 2017. Will finish my Computer Science Bachelor in 2023.
+Have some numbers: I participated in 10 Ludum Dares. Won 6th in Humor once. Caught a cold 4 times during one winter in Berlin.
 
-Most of my games were made in Unity, but I’ve experimented with other engines as well – Godot especially is one I’ve grown increasingly fond of. My favourite genres (and thus the ones I have the most experience with) are platformer, strategy, and RPG games, but I’m fine with any genre really (except ultra-violent ones). I love story-based games and modding/romhacking other games. "
+This is my portfolio. Enjoy your stay! If you wish to contact me, send me an email at gurlad2002@gmail.com."
 autowrap = true
 
 [editable path="VBoxContainer/Title2"]

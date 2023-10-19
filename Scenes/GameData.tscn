@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Textures/Icons/Clock/0002.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Icons/Clock/0001.png" type="Texture" id=2]
 [ext_resource path="res://Theme/PointMedium.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=4]
 [ext_resource path="res://Scripts/GameData.cs" type="Script" id=5]

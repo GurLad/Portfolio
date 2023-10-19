@@ -7,8 +7,24 @@ public class GamePreview : PanelContainer
 {
     [Export(PropertyHint.MultilineText)]
     public string GameName { get => title.Text; set { if (Engine.EditorHint) title.Text = value; } }
+    //[Export]
+    //public Texture Image { get => thumbnail.Texture; set { if (Engine.EditorHint) thumbnail.Texture = value; } }
     [Export]
-    public Texture Image { get => thumbnail.Texture; set { if (Engine.EditorHint) thumbnail.Texture = value; } }
+    public List<Texture> Thumbnails
+    {
+        get => thumbnail.Thumbnails;
+        set
+        {
+            if (Engine.EditorHint)
+            {
+                thumbnail.Thumbnails = value;
+                if ((value?.Count ?? -1) > 0)
+                {
+                    thumbnail.Texture = value[0];
+                }
+            }
+        }
+    }
     [Export]
     public string EngineName
     {
@@ -45,6 +61,11 @@ public class GamePreview : PanelContainer
     public Color Color { get => background.SelfModulate; set { if (Engine.EditorHint) background.SelfModulate = value; } }
 
     [Export]
+    private float expandTime;
+    [Export]
+    private float expandSize;
+
+    [Export]
     private NodePath pathTitle;
     private Label _title = null;
     private Label title => _title ?? (_title = GetNode<Label>(pathTitle));
@@ -62,6 +83,43 @@ public class GamePreview : PanelContainer
     private PanelContainer background => _background ?? (_background = GetNode<PanelContainer>(pathBackground));
     [Export]
     private NodePath pathThumbnail;
-    private TextureRect _thumbnail = null;
-    private TextureRect thumbnail => _thumbnail ?? (_thumbnail = GetNode<TextureRect>(pathThumbnail));
+    private ThumbnailSlideshow _thumbnail = null;
+    private ThumbnailSlideshow thumbnail => _thumbnail ?? (_thumbnail = GetNode<ThumbnailSlideshow>(pathThumbnail));
+
+    private Interpolator interpolator = new Interpolator();
+
+    public override void _Ready()
+    {
+        base._Ready();
+        AddChild(interpolator);
+        RectPivotOffset = RectSize / 2;
+    }
+
+    public void OnMouseEnter()
+    {
+        if (!Engine.EditorHint)
+        {
+            thumbnail.Begin();
+            interpolator.Interpolate(expandTime,
+                new Interpolator.InterpolateObject(
+                    (a) => RectScale = Vector2.One * a,
+                    RectScale.x,
+                    expandSize,
+                    Easing.EaseOutQuart));
+        }
+    }
+
+    public void OnMouseLeave()
+    {
+        if (!Engine.EditorHint)
+        {
+            thumbnail.End();
+            interpolator.Interpolate(expandTime,
+                new Interpolator.InterpolateObject(
+                    (a) => RectScale = Vector2.One * a,
+                    RectScale.x,
+                    1,
+                    Easing.EaseOutQuart));
+        }
+    }
 }

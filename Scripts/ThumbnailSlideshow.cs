@@ -19,7 +19,6 @@ public class ThumbnailSlideshow : TextureRect
     private Interpolator interpolator = new Interpolator();
     private int currentImage = 0;
     private bool transitioning = false;
-    public string wa;
 
     public override void _Ready()
     {

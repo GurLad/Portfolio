@@ -22,7 +22,6 @@ AnimationController="*res://Scenes/AnimationController.tscn"
 
 window/size/width=1920
 window/size/height=1280
-window/size/fullscreen=true
 
 [gui]
 

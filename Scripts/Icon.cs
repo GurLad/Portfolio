@@ -18,7 +18,14 @@ public class Icon : TextureRect
     public override void _Process(float delta)
     {
         base._Process(delta);
-        Texture = SafeGetIcon(AnimationController.CurrentFrame);
+        if (IconName.Length > 0)
+        {
+            Texture = SafeGetIcon(AnimationController.CurrentFrame);
+        }
+        else
+        {
+            Texture = null;
+        }
         //if (index != prevInd)
         //{
         //    prevInd = index;

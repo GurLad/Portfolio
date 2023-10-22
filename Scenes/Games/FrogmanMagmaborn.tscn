@@ -1,0 +1,171 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Textures/BasicPanel.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/LinkButton.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.152941, 0.152941, 0.211765, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.501961, 0.211765, 0.419608, 1 )
+
+[node name="FrogmanMagmaborn" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+custom_constants/separation = 50
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 25.0
+
+[node name="Highlights" type="PanelContainer" parent="."]
+margin_top = 75.0
+margin_right = 1920.0
+margin_bottom = 372.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1900.0
+margin_bottom = 277.0
+
+[node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1880.0
+margin_bottom = 71.0
+Text = "Frogman Magmaborn"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
+margin_left = 617.0
+margin_top = 0.0
+margin_right = 1263.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
+margin_right = 578.0
+text = "Frogman Magmaborn"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
+margin_left = 582.0
+margin_right = 646.0
+texture = null
+IconName = ""
+
+[node name="Text" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 75.0
+margin_right = 1880.0
+margin_bottom = 184.0
+text = "Frogman Magmaborn is my largest project to date – an open-source rogue-like tactical RPG with a story. I’ve made most of the game on my own, but my friend Dan helped with the story, made the conversation backgrounds, and created some portraits (including the high-resolution ones used in the trailer).
+
+In addition to the game itself, I’ve also created a pretty extensive modding tool in WinForms called Frog Forge, which I've used as well to make most of the content in the game. "
+autowrap = true
+
+[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer"]
+margin_top = 188.0
+margin_right = 1880.0
+margin_bottom = 198.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Highlights/VBoxContainer"]
+margin_top = 202.0
+margin_right = 1880.0
+margin_bottom = 243.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer/CenterContainer"]
+margin_left = 802.0
+margin_right = 1078.0
+margin_bottom = 41.0
+custom_constants/separation = 20
+
+[node name="GitHub" parent="Highlights/VBoxContainer/CenterContainer/HBoxContainer" instance=ExtResource( 4 )]
+margin_right = 84.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "GitHub"
+color = Color( 0.152941, 0.152941, 0.211765, 1 )
+url = "https://github.com/GurLad/FrogmanMagmaborn"
+
+[node name="Steam" parent="Highlights/VBoxContainer/CenterContainer/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 104.0
+margin_right = 183.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+text = "Steam"
+color = Color( 0.262745, 0.262745, 0.309804, 1 )
+url = "https://store.steampowered.com/app/1768830/Frogman_Magmaborn/"
+
+[node name="itchio" parent="Highlights/VBoxContainer/CenterContainer/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 203.0
+margin_right = 276.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+text = "itch.io"
+color = Color( 0.501961, 0.211765, 0.419608, 1 )
+url = "https://disc-o-key.itch.io/frogman-magmaborn"
+
+[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer"]
+margin_top = 247.0
+margin_right = 1880.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 422.0
+margin_right = 1920.0
+margin_bottom = 447.0
+
+[editable path="Highlights/VBoxContainer/Title"]

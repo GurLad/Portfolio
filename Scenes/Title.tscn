@@ -4,7 +4,7 @@
 [ext_resource path="res://Theme/PointHuge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
 [ext_resource path="res://Scenes/AnimationController.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Textures/Icons/Test3/0002.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Icons/Test3/0004.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=6]
 
 [node name="Title" type="CenterContainer"]

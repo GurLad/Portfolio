@@ -1,0 +1,212 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Textures/BasicPanel.png" type="Texture" id=1]
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/LinkButton.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.152941, 0.152941, 0.211765, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.729412, 0.380392, 0.337255, 1 )
+
+[node name="TheCursedVestOfSoulHarvesting" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+custom_constants/separation = 50
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 25.0
+
+[node name="Highlights" type="PanelContainer" parent="."]
+margin_top = 75.0
+margin_right = 1920.0
+margin_bottom = 900.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1900.0
+margin_bottom = 805.0
+custom_constants/separation = 20
+
+[node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1880.0
+margin_bottom = 71.0
+Text = "The Cursed Vest of Soul Harvesting"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
+margin_left = 362.0
+margin_top = 0.0
+margin_right = 1518.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
+margin_right = 1088.0
+text = "The Cursed Vest of Soul Harvesting"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
+margin_left = 1092.0
+margin_right = 1156.0
+texture = null
+IconName = ""
+
+[node name="Links" type="CenterContainer" parent="Highlights/VBoxContainer"]
+margin_top = 91.0
+margin_right = 1880.0
+margin_bottom = 132.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer/Links"]
+margin_left = 820.0
+margin_right = 1059.0
+margin_bottom = 41.0
+custom_constants/separation = 20
+
+[node name="GitHub" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 4 )]
+margin_right = 84.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "GitHub"
+color = Color( 0.152941, 0.152941, 0.211765, 1 )
+url = "https://github.com/GurLad/FrogmanMagmaborn"
+
+[node name="LudumDare" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 104.0
+margin_right = 239.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+text = "Ludum Dare"
+color = Color( 0.729412, 0.380392, 0.337255, 1 )
+url = "https://ldjam.com/events/ludum-dare/52/the-cursed-vest-of-harvesting/"
+
+[node name="Text" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 152.0
+margin_right = 1880.0
+margin_bottom = 205.0
+text = "This game features the best protagonist I’ve ever made – a mind-controlling vest. It’s a puzzle game where you need to climb a tower by possessing different kinds of monsters. It was made for Ludum Dare 52 Compo. This was my 8th and personal favourite Ludum Dare submission."
+autowrap = true
+
+[node name="Title2" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 225.0
+margin_right = 1880.0
+margin_bottom = 296.0
+Text = "Animations -> Actions -> Units"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
+margin_left = 422.0
+margin_top = 0.0
+margin_right = 1458.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
+margin_right = 968.0
+text = "Animations -> Actions -> Units"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
+margin_left = 972.0
+margin_right = 1036.0
+texture = null
+IconName = ""
+
+[node name="Text2" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 316.0
+margin_right = 1880.0
+margin_bottom = 565.0
+text = "While I consider it a puzzle game since it doesn't really have strategy nor RPG elements, I still used a tactical RPG formula for the gameplay. I ended up using an actions queue system, where untis activate abstract UnitAction classes, which in turn queue a mix of immediate actions (lambdas) and different implementations of my custom abstract Animation class (since all characters were simply cubes, most animations consisted of simple moves/rotations/stretches).
+
+This system ended up being surprisingly comfortable for the game: it was extremely easy to reause animations between different actions (for example, both the Attack actions and Transfer Vest actions used the same animation), create new unit actions & animations, and control the turn flow of the game.
+
+It did have one major flaw, though - all animations & actions had to be hardcoded. This is fine for genres like tactical RPGs, where one has a very limited amount of different actions (move, attack, wait, trade, etc.) which all do vastly different things, but not so much for, say, JRPGs, where there tend to be dozens of different attacks which work more or less the same."
+autowrap = true
+
+[node name="Title3" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 585.0
+margin_right = 1880.0
+margin_bottom = 656.0
+Text = "A custom LDtk importer"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title3" index="0"]
+margin_left = 542.0
+margin_top = 0.0
+margin_right = 1338.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
+margin_right = 728.0
+text = "A custom LDtk importer"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="2"]
+margin_left = 732.0
+margin_right = 796.0
+texture = null
+IconName = ""
+
+[node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 676.0
+margin_right = 1880.0
+margin_bottom = 785.0
+text = "For my Ludum Dare 51 entry, I created a custom LDtk importer, to convert 2D levels into top-down 3D ones. This allowed me to quickly prototype levels without having to create a custom level editor.
+
+I ended up converting it to Godot during the jam, and managed to finish 7 levels thanks to it."
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 950.0
+margin_right = 1920.0
+margin_bottom = 975.0
+
+[editable path="Highlights/VBoxContainer/Title"]
+[editable path="Highlights/VBoxContainer/Title2"]
+[editable path="Highlights/VBoxContainer/Title3"]

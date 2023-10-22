@@ -57,13 +57,14 @@ margin_bottom = 25.0
 [node name="Highlights" type="PanelContainer" parent="."]
 margin_top = 75.0
 margin_right = 1920.0
-margin_bottom = 372.0
+margin_bottom = 872.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1900.0
-margin_bottom = 277.0
+margin_bottom = 777.0
+custom_constants/separation = 20
 
 [node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -93,33 +94,18 @@ margin_right = 646.0
 texture = null
 IconName = ""
 
-[node name="Text" type="Label" parent="Highlights/VBoxContainer"]
-margin_top = 75.0
+[node name="Links" type="CenterContainer" parent="Highlights/VBoxContainer"]
+margin_top = 91.0
 margin_right = 1880.0
-margin_bottom = 184.0
-text = "Frogman Magmaborn is my largest project to date – an open-source rogue-like tactical RPG with a story. I’ve made most of the game on my own, but my friend Dan helped with the story, made the conversation backgrounds, and created some portraits (including the high-resolution ones used in the trailer).
+margin_bottom = 132.0
 
-In addition to the game itself, I’ve also created a pretty extensive modding tool in WinForms called Frog Forge, which I've used as well to make most of the content in the game. "
-autowrap = true
-
-[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer"]
-margin_top = 188.0
-margin_right = 1880.0
-margin_bottom = 198.0
-rect_min_size = Vector2( 0, 10 )
-
-[node name="CenterContainer" type="CenterContainer" parent="Highlights/VBoxContainer"]
-margin_top = 202.0
-margin_right = 1880.0
-margin_bottom = 243.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer/Links"]
 margin_left = 802.0
 margin_right = 1078.0
 margin_bottom = 41.0
 custom_constants/separation = 20
 
-[node name="GitHub" parent="Highlights/VBoxContainer/CenterContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="GitHub" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 4 )]
 margin_right = 84.0
 margin_bottom = 41.0
 custom_styles/hover = SubResource( 1 )
@@ -131,7 +117,7 @@ text = "GitHub"
 color = Color( 0.152941, 0.152941, 0.211765, 1 )
 url = "https://github.com/GurLad/FrogmanMagmaborn"
 
-[node name="Steam" parent="Highlights/VBoxContainer/CenterContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="Steam" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 4 )]
 margin_left = 104.0
 margin_right = 183.0
 margin_bottom = 41.0
@@ -144,7 +130,7 @@ text = "Steam"
 color = Color( 0.262745, 0.262745, 0.309804, 1 )
 url = "https://store.steampowered.com/app/1768830/Frogman_Magmaborn/"
 
-[node name="itchio" parent="Highlights/VBoxContainer/CenterContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="itchio" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 4 )]
 margin_left = 203.0
 margin_right = 276.0
 margin_bottom = 41.0
@@ -157,15 +143,98 @@ text = "itch.io"
 color = Color( 0.501961, 0.211765, 0.419608, 1 )
 url = "https://disc-o-key.itch.io/frogman-magmaborn"
 
-[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer"]
-margin_top = 247.0
+[node name="Text" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 152.0
 margin_right = 1880.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 0, 10 )
+margin_bottom = 261.0
+text = "Frogman Magmaborn is my largest project to date – an open-source rogue-like tactical RPG with a story. I’ve made most of the game on my own, but my friend Dan helped with the story, made the conversation backgrounds, and created some portraits (including the high-resolution ones used in the trailer).
+
+In addition to the game itself, I’ve also created a pretty extensive modding tool in WinForms called Frog Forge, which I've used as well to make most of the content in the game. "
+autowrap = true
+
+[node name="Title2" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 281.0
+margin_right = 1880.0
+margin_bottom = 352.0
+Text = "Designed for moddability"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
+margin_left = 512.0
+margin_top = 0.0
+margin_right = 1368.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
+margin_right = 788.0
+text = "Designed for moddability"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
+margin_left = 792.0
+margin_right = 856.0
+texture = null
+IconName = ""
+
+[node name="Text2" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 372.0
+margin_right = 1880.0
+margin_bottom = 509.0
+text = "Pretty much all the content of the game is stored in json/txt/png/ogg files, and can be edited using a dedicated modding tool - Frog Forge.
+I created it alongside the core game, and used it myself to create all maps, classes, characters, events, etc. in the game.
+
+The game itself has two versions (which use different compilation flags): the normal build, where all the game data is stored inside the build and cannot be changed; and the moddable build, where it's loaded on launch from a folder on the user's computer."
+autowrap = true
+
+[node name="Title3" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 529.0
+margin_right = 1880.0
+margin_bottom = 600.0
+Text = "Mimicing (some) NES limitations"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title3" index="0"]
+margin_left = 407.0
+margin_top = 0.0
+margin_right = 1473.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
+margin_right = 998.0
+text = "Mimicing (some) NES limitations"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="2"]
+margin_left = 1002.0
+margin_right = 1066.0
+texture = null
+IconName = ""
+
+[node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 620.0
+margin_right = 1880.0
+margin_bottom = 757.0
+text = "I thought that limiting myself to the original NES's resolution (256x240) and palette system (4 sprite palettes & 4 background palettes, each with 4 colours. I did not implement the max-8-sprites-per-scanline limitation though, mostly because I felt it would lead to worse UI) would be an interesting challenge, so I wrote some shaders to enforce them.
+
+However, these limitations ended up having some advantages: for example, the palettes being shared between all sprites on screen made it relatively easy to create fade or hue shifting effects.
+I also created a camera upscaling shader (like the ones used in some emulators), which was a fun challenge."
+autowrap = true
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 422.0
+margin_top = 922.0
 margin_right = 1920.0
-margin_bottom = 447.0
+margin_bottom = 947.0
 
 [editable path="Highlights/VBoxContainer/Title"]
+[editable path="Highlights/VBoxContainer/Title2"]
+[editable path="Highlights/VBoxContainer/Title3"]

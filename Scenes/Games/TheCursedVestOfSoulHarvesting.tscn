@@ -37,6 +37,7 @@ modulate_color = Color( 0.729412, 0.380392, 0.337255, 1 )
 [node name="TheCursedVestOfSoulHarvesting" type="VBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 theme = ExtResource( 2 )
 custom_constants/separation = 50
 
@@ -48,63 +49,21 @@ margin_bottom = 25.0
 margin_top = 75.0
 margin_right = 1920.0
 margin_bottom = 1977.0
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1900.0
 margin_bottom = 1882.0
+mouse_filter = 2
 custom_constants/separation = 20
-
-[node name="HBoxContainer" type="Control" parent="Highlights/VBoxContainer"]
-margin_right = 1880.0
-margin_bottom = 1057.0
-rect_min_size = Vector2( 0, 1057 )
-
-[node name="HSplitContainer" type="HSplitContainer" parent="Highlights/VBoxContainer/HBoxContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-split_offset = 940
-
-[node name="Control" type="Control" parent="Highlights/VBoxContainer/HBoxContainer/HSplitContainer"]
-margin_right = 940.0
-margin_bottom = 1057.0
-rect_clip_content = true
-
-[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/HSplitContainer/Control"]
-material = ExtResource( 7 )
-margin_right = 1880.0
-margin_bottom = 1057.0
-rect_min_size = Vector2( 1880, 1057 )
-size_flags_horizontal = 3
-texture = ExtResource( 5 )
-expand = true
-stretch_mode = 6
-
-[node name="Control3" type="Control" parent="Highlights/VBoxContainer/HBoxContainer/HSplitContainer"]
-margin_left = 952.0
-margin_right = 1880.0
-margin_bottom = 1057.0
-rect_clip_content = true
-
-[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/HSplitContainer/Control3"]
-material = ExtResource( 7 )
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -1868.0
-margin_bottom = 1057.0
-rect_min_size = Vector2( 1880, 1057 )
-size_flags_horizontal = 3
-texture = ExtResource( 6 )
-expand = true
-stretch_mode = 6
 
 [node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1077.0
 margin_right = 1880.0
-margin_bottom = 1148.0
+margin_bottom = 71.0
 Text = "The Cursed Vest of Soul Harvesting"
 Icon = ""
 
@@ -129,9 +88,9 @@ texture = null
 IconName = ""
 
 [node name="Links" type="CenterContainer" parent="Highlights/VBoxContainer"]
-margin_top = 1168.0
+margin_top = 91.0
 margin_right = 1880.0
-margin_bottom = 1209.0
+margin_bottom = 132.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer/Links"]
 margin_left = 820.0
@@ -165,18 +124,18 @@ color = Color( 0.729412, 0.380392, 0.337255, 1 )
 url = "https://ldjam.com/events/ludum-dare/52/the-cursed-vest-of-harvesting/"
 
 [node name="Text" type="Label" parent="Highlights/VBoxContainer"]
-margin_top = 1229.0
+margin_top = 152.0
 margin_right = 1880.0
-margin_bottom = 1282.0
+margin_bottom = 205.0
 text = "This game features the best protagonist I’ve ever made – a mind-controlling vest. It’s a puzzle game where you need to climb a tower by possessing different kinds of monsters. It was made for Ludum Dare 52 Compo. This was my 8th and personal favourite Ludum Dare submission."
 autowrap = true
 
 [node name="Title2" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1302.0
+margin_top = 225.0
 margin_right = 1880.0
-margin_bottom = 1373.0
+margin_bottom = 296.0
 Text = "Animations -> Actions -> Units"
 Icon = ""
 
@@ -201,9 +160,9 @@ texture = null
 IconName = ""
 
 [node name="Text2" type="Label" parent="Highlights/VBoxContainer"]
-margin_top = 1393.0
+margin_top = 316.0
 margin_right = 1880.0
-margin_bottom = 1642.0
+margin_bottom = 565.0
 text = "While I consider it a puzzle game since it doesn't really have strategy nor RPG elements, I still used a tactical RPG formula for the gameplay. I ended up using an actions queue system, where units activate abstract UnitAction classes, which in turn queue a mix of immediate actions (lambdas) and different implementations of my custom abstract Animation class (since all characters were simply cubes, most animations consisted of simple moves/rotations/stretches).
 
 This system ended up being surprisingly comfortable for the game: it was extremely easy to reuse animations between different actions (for example, both the Attack actions and Transfer Vest actions used the same animation), create new unit actions & animations, and control the turn flow of the game.
@@ -214,9 +173,9 @@ autowrap = true
 [node name="Title3" parent="Highlights/VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1662.0
+margin_top = 585.0
 margin_right = 1880.0
-margin_bottom = 1733.0
+margin_bottom = 656.0
 Text = "A custom LDtk importer"
 Icon = ""
 
@@ -239,6 +198,57 @@ margin_left = 732.0
 margin_right = 796.0
 texture = null
 IconName = ""
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Highlights/VBoxContainer"]
+margin_top = 676.0
+margin_right = 1880.0
+margin_bottom = 1733.0
+rect_min_size = Vector2( 0, 1057 )
+custom_constants/autohide = 0
+split_offset = 940
+
+[node name="Control" type="Control" parent="Highlights/VBoxContainer/HSplitContainer"]
+margin_right = 940.0
+margin_bottom = 1057.0
+rect_clip_content = true
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/HSplitContainer/Control"]
+material = ExtResource( 7 )
+margin_right = 1880.0
+margin_bottom = 1057.0
+rect_min_size = Vector2( 1880, 1057 )
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Control3" type="Control" parent="Highlights/VBoxContainer/HSplitContainer"]
+margin_left = 952.0
+margin_right = 1880.0
+margin_bottom = 1057.0
+rect_clip_content = true
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/HSplitContainer/Control3"]
+material = ExtResource( 7 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1868.0
+margin_bottom = 1057.0
+rect_min_size = Vector2( 1880, 1057 )
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
 margin_top = 1753.0

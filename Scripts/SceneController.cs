@@ -3,19 +3,115 @@ using System;
 
 public class SceneController : Control
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
+    private enum State { Idle, FadeOut, FadeIn }
+    public static SceneController Current;
 
-    // Called when the node enters the scene tree for the first time.
+    [Export]
+    private NodePath pathScenesNode;
+    [Export]
+    private NodePath pathBackButton;
+
+    private State state;
+    private Control currentScene = null;
+    private Action midTransition;
+    private Action postTransition;
+    private Timer timer = new Timer();
+    private Node scenesNode;
+    private BackButton backButton;
+
     public override void _Ready()
     {
-        
+        base._Ready();
+        Current = this;
+        AddChild(timer);
+        timer.OneShot = true;
+        scenesNode = GetNode(pathScenesNode);
+        backButton = GetNode<BackButton>(pathBackButton);
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public override void _Process(float delta)
+    {
+        base._Process(delta);
+        switch (state)
+        {
+            case State.Idle:
+                break;
+            case State.FadeOut:
+                currentScene.Modulate = new Color(currentScene.Modulate, 1 - timer.Percent());
+                if (timer.TimeLeft <= 0)
+                {
+                    FinishFadeOut();
+                }
+                break;
+            case State.FadeIn:
+                currentScene.Modulate = new Color(currentScene.Modulate, timer.Percent());
+                if (timer.TimeLeft <= 0)
+                {
+                    FinishFadeIn();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void FinishFadeOut()
+    {
+        currentScene.Modulate = new Color(currentScene.Modulate, 1);
+        currentScene.Visible = false;
+        state = State.FadeIn;
+        midTransition?.Invoke();
+        timer.Start();
+        currentScene.Visible = true;
+    }
+
+    private void FinishFadeIn()
+    {
+        currentScene.Modulate = new Color(currentScene.Modulate, 1);
+        state = State.Idle;
+        postTransition?.Invoke();
+    }
+
+    public void Transition(Action midTransition, Action postTransition)
+    {
+        this.midTransition = midTransition;
+        this.postTransition = postTransition;
+        state = State.FadeOut;
+        timer.Start();
+    }
+
+    public void TransitionToNewScene(PackedScene scene, bool clearCurrent = false)
+    {
+        Transition(() =>
+        {
+            if (clearCurrent)
+            {
+                ClearCurrentScene();
+            }
+            scenesNode.AddChild(currentScene = scene.Instance<Control>());
+            backButton.ShowButton();
+        }, null);
+    }
+
+    public void TransitionToOldScene(Control scene, bool clearCurrent = true)
+    {
+        Transition(() =>
+        {
+            if (clearCurrent)
+            {
+                ClearCurrentScene();
+            }
+            currentScene = scene;
+            backButton.HideButton();
+        }, null);
+    }
+
+    private void ClearCurrentScene()
+    {
+        if (currentScene != null)
+        {
+            currentScene.QueueFree();
+            currentScene = null;
+        }
+    }
 }

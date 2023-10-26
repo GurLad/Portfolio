@@ -10,9 +10,9 @@
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/EventExample.png" type="Texture" id=8]
 [ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=9]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0002.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0041.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Upscale/0001.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0044.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0000.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Upscale/0000.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 8.0
@@ -92,7 +92,6 @@ margin_bottom = 71.0
 [node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
 texture = null
 IconName = ""
-NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
 margin_right = 578.0
@@ -103,7 +102,6 @@ margin_left = 582.0
 margin_right = 646.0
 texture = null
 IconName = ""
-NumFrames = 5
 
 [node name="Links" type="CenterContainer" parent="Highlights/VBoxContainer"]
 margin_top = 91.0
@@ -277,9 +275,9 @@ rect_min_size = Vector2( 0, 380 )
 material = ExtResource( 9 )
 margin_right = 624.0
 margin_bottom = 380.0
-rect_min_size = Vector2( 64, 64 )
+rect_min_size = Vector2( 475, 380 )
 size_flags_horizontal = 3
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 10 )
@@ -293,9 +291,9 @@ material = ExtResource( 9 )
 margin_left = 628.0
 margin_right = 1252.0
 margin_bottom = 380.0
-rect_min_size = Vector2( 64, 64 )
+rect_min_size = Vector2( 475, 380 )
 size_flags_horizontal = 3
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 10 )
@@ -309,7 +307,7 @@ material = ExtResource( 9 )
 margin_left = 1256.0
 margin_right = 1880.0
 margin_bottom = 380.0
-rect_min_size = Vector2( 64, 64 )
+rect_min_size = Vector2( 475, 380 )
 size_flags_horizontal = 3
 texture = ExtResource( 13 )
 expand = true

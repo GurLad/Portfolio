@@ -5,13 +5,13 @@
 [ext_resource path="res://Textures/Placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/GameData.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=5]
-[ext_resource path="res://Textures/Icons/Test3/0003.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Team/0000.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/GamePreview.cs" type="Script" id=7]
-[ext_resource path="res://Textures/Icons/Date/0003.png" type="Texture" id=8]
-[ext_resource path="res://Textures/Icons/Clock/0003.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Icons/Clock/0000.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Icons/Date/0000.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/ThumbnailSlideshow.cs" type="Script" id=10]
 [ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=11]
-[ext_resource path="res://Textures/Icons/Team/0003.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Icons/Test3/0000.png" type="Texture" id=12]
 
 [node name="GamePreview" type="PanelContainer"]
 anchor_right = 1.0
@@ -111,7 +111,7 @@ IconName = "Test3"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/EngineData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 6 )
+texture = ExtResource( 12 )
 IconName = "Test3"
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/EngineData/TextureRect" index="0"]
@@ -134,7 +134,7 @@ IconName = "Date"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer/DateData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 IconName = "Date"
 
 [node name="Number" parent="VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
@@ -170,7 +170,7 @@ Text = "99 Decades"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TimeData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Text" parent="VBoxContainer/HBoxContainer2/TimeData" index="1"]
 margin_top = 12.0
@@ -189,7 +189,7 @@ IconName = "Team"
 
 [node name="TextureRect" parent="VBoxContainer/HBoxContainer2/TeamData" index="0"]
 margin_bottom = 64.0
-texture = ExtResource( 12 )
+texture = ExtResource( 6 )
 IconName = "Team"
 
 [node name="Number" parent="VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]

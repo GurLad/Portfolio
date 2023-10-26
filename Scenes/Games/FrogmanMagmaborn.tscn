@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=2]
@@ -10,7 +10,9 @@
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/EventExample.png" type="Texture" id=8]
 [ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=9]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0005.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0002.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0041.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Upscale/0001.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 8.0
@@ -64,13 +66,13 @@ margin_bottom = 25.0
 [node name="Highlights" type="PanelContainer" parent="."]
 margin_top = 75.0
 margin_right = 1920.0
-margin_bottom = 1360.0
+margin_bottom = 1676.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1900.0
-margin_bottom = 1265.0
+margin_bottom = 1581.0
 custom_constants/separation = 20
 
 [node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
@@ -265,12 +267,34 @@ texture = null
 IconName = ""
 NumFrames = 5
 
-[node name="IconL" type="TextureRect" parent="Highlights/VBoxContainer"]
-material = ExtResource( 9 )
+[node name="HBoxContainer2" type="HBoxContainer" parent="Highlights/VBoxContainer"]
 margin_top = 1024.0
 margin_right = 1880.0
-margin_bottom = 1088.0
+margin_bottom = 1404.0
+rect_min_size = Vector2( 0, 380 )
+
+[node name="Fade" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer2"]
+material = ExtResource( 9 )
+margin_right = 624.0
+margin_bottom = 380.0
 rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 10 )
+IconName = "Fade"
+Path = "res://Textures/Games/FrogmanMagmaborn"
+NumFrames = 46
+Rate = 16.0
+
+[node name="Hue" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer2"]
+material = ExtResource( 9 )
+margin_left = 628.0
+margin_right = 1252.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
 texture = ExtResource( 11 )
 expand = true
 stretch_mode = 6
@@ -280,10 +304,26 @@ Path = "res://Textures/Games/FrogmanMagmaborn"
 NumFrames = 12
 Rate = 1.25
 
-[node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
-margin_top = 1108.0
+[node name="Upscale" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer2"]
+material = ExtResource( 9 )
+margin_left = 1256.0
 margin_right = 1880.0
-margin_bottom = 1245.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 10 )
+IconName = "Upscale"
+Path = "res://Textures/Games/FrogmanMagmaborn"
+NumFrames = 2
+Rate = 0.625
+
+[node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 1424.0
+margin_right = 1880.0
+margin_bottom = 1561.0
 text = "I thought that limiting myself to the original NES's resolution (256x240) and palette system (4 sprite palettes & 4 background palettes, each with 4 colours) would be an interesting challenge, so I wrote some shaders to enforce them. I did not implement the max-8-sprites-per-scanline limitation though, mostly because I felt it would lead to worse UI.
 
 However, these limitations ended up having some advantages: for example, the palettes being shared between all sprites on screen made it relatively easy to create fade or hue shifting effects.
@@ -291,9 +331,9 @@ I also created a camera upscaling shader (like the ones used in some emulators),
 autowrap = true
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 1410.0
+margin_top = 1726.0
 margin_right = 1920.0
-margin_bottom = 1435.0
+margin_bottom = 1751.0
 
 [editable path="Highlights/VBoxContainer/Title"]
 [editable path="Highlights/VBoxContainer/Title2"]

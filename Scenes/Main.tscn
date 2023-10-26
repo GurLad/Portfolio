@@ -49,6 +49,7 @@ stretch_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 9 )
+transitionTime = 1.0
 pathScenesNode = NodePath("ScrollContainer/MarginContainer")
 pathBackButton = NodePath("TextureButton")
 pathFirstScene = NodePath("ScrollContainer/MarginContainer/Index")

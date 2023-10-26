@@ -128,6 +128,7 @@ public class GamePreview : PanelContainer
     public void Click()
     {
         SceneController.Current.TransitionToNewScene(GamePage);
+        thumbnail.End();
     }
 
     public void GUIInput(InputEvent inputEvent)

@@ -7,6 +7,8 @@ public class SceneController : Control
     public static SceneController Current;
 
     [Export]
+    private float transitionTime = 2;
+    [Export]
     private NodePath pathScenesNode;
     [Export]
     private NodePath pathBackButton;
@@ -27,6 +29,7 @@ public class SceneController : Control
         Current = this;
         AddChild(timer);
         timer.OneShot = true;
+        timer.WaitTime = transitionTime / 2;
         scenesNode = GetNode(pathScenesNode);
         backButton = GetNode<BackButton>(pathBackButton);
         currentScene = GetNode<Control>(pathFirstScene);
@@ -85,6 +88,10 @@ public class SceneController : Control
 
     public void TransitionToNewScene(PackedScene scene, bool clearCurrent = false)
     {
+        if (state != State.Idle)
+        {
+            return;
+        }
         Transition(() =>
         {
             if (clearCurrent)
@@ -99,6 +106,10 @@ public class SceneController : Control
 
     public void TransitionToOldScene(Control scene, bool clearCurrent = true)
     {
+        if (state != State.Idle)
+        {
+            return;
+        }
         Transition(() =>
         {
             if (clearCurrent)

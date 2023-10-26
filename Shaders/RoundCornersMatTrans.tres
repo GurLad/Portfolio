@@ -6,4 +6,4 @@
 shader = ExtResource( 1 )
 shader_param/minDist = 1.0
 shader_param/centre = 0.03
-shader_param/transparent = null
+shader_param/transparent = true

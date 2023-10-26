@@ -5,6 +5,7 @@ code = "shader_type canvas_item;
 
 uniform float minDist;
 uniform float centre : hint_range(0.0, 0.5);
+uniform bool transparent;
 
 void fragment() {
 	COLOR = texture(TEXTURE, UV);
@@ -17,6 +18,6 @@ void fragment() {
 	//float dist = sqrt(pow(absUV.x - centre, 2) + pow(absUV.y  - centre, 2));
 	float dist = sqrt(pow(absUV.x - (0.5 - centre), 2) + pow(absUV.y - (0.5 - centre), 2));
 	float outsideCircles = 1.0 - max(0, sign(dist - centre)); //max(0, sign(minDist - dist)
-	COLOR.a *= max(inCircles, outsideCircles);
+	COLOR.a = (transparent ? COLOR.a : 1.0) * max(inCircles, outsideCircles);
 }
 "

@@ -59,6 +59,8 @@ public class GamePreview : PanelContainer
     public string Description { get => description.Text; set { if (Engine.EditorHint) description.Text = value; } }
     [Export]
     public Color Color { get => background.SelfModulate; set { if (Engine.EditorHint) background.SelfModulate = value; } }
+    [Export]
+    public PackedScene GamePage;
 
     [Export]
     private float expandTime;
@@ -120,6 +122,19 @@ public class GamePreview : PanelContainer
                     RectScale.x,
                     1,
                     Easing.EaseOutQuart));
+        }
+    }
+
+    public void Click()
+    {
+        SceneController.Current.TransitionToNewScene(GamePage);
+    }
+
+    public void GUIInput(InputEvent inputEvent)
+    {
+        if (inputEvent is InputEventMouse mouseEvent && mouseEvent.IsPressed() && (mouseEvent.ButtonMask & (int)ButtonList.MaskLeft) != 0)
+        {
+            Click();
         }
     }
 }

@@ -10,6 +10,8 @@ public class SceneController : Control
     private NodePath pathScenesNode;
     [Export]
     private NodePath pathBackButton;
+    [Export]
+    private NodePath pathFirstScene;
 
     private State state;
     private Control currentScene = null;
@@ -27,6 +29,7 @@ public class SceneController : Control
         timer.OneShot = true;
         scenesNode = GetNode(pathScenesNode);
         backButton = GetNode<BackButton>(pathBackButton);
+        currentScene = GetNode<Control>(pathFirstScene);
     }
 
     public override void _Process(float delta)
@@ -89,6 +92,7 @@ public class SceneController : Control
                 ClearCurrentScene();
             }
             scenesNode.AddChild(currentScene = scene.Instance<Control>());
+            currentScene.Modulate = new Color(currentScene.Modulate, 0);
             backButton.ShowButton();
         }, null);
     }
@@ -102,6 +106,7 @@ public class SceneController : Control
                 ClearCurrentScene();
             }
             currentScene = scene;
+            currentScene.Modulate = new Color(currentScene.Modulate, 0);
             backButton.HideButton();
         }, null);
     }

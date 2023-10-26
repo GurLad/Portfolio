@@ -51,6 +51,7 @@ anchor_bottom = 1.0
 script = ExtResource( 9 )
 pathScenesNode = NodePath("ScrollContainer/MarginContainer")
 pathBackButton = NodePath("TextureButton")
+pathFirstScene = NodePath("ScrollContainer/MarginContainer/Index")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Holder"]
 anchor_right = 1.0
@@ -73,3 +74,5 @@ texture_normal = ExtResource( 11 )
 script = ExtResource( 10 )
 pathIndex = NodePath("../ScrollContainer/MarginContainer/Index")
 showTime = 0.5
+
+[connection signal="pressed" from="Holder/TextureButton" to="Holder/TextureButton" method="Click"]

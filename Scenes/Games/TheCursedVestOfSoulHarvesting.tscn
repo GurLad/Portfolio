@@ -199,21 +199,28 @@ margin_right = 796.0
 texture = null
 IconName = ""
 
-[node name="HSplitContainer" type="HSplitContainer" parent="Highlights/VBoxContainer"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Highlights/VBoxContainer"]
 margin_top = 676.0
 margin_right = 1880.0
 margin_bottom = 1733.0
 rect_min_size = Vector2( 0, 1057 )
+ratio = 1.7778
+stretch_mode = 0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Highlights/VBoxContainer/AspectRatioContainer"]
+margin_top = -0.243408
+margin_right = 1880.0
+margin_bottom = 1057.24
 custom_constants/autohide = 0
 split_offset = 940
 
-[node name="Control" type="Control" parent="Highlights/VBoxContainer/HSplitContainer"]
+[node name="Control" type="Control" parent="Highlights/VBoxContainer/AspectRatioContainer/HSplitContainer"]
 margin_right = 940.0
-margin_bottom = 1057.0
+margin_bottom = 1057.49
 rect_clip_content = true
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/HSplitContainer/Control"]
+[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/AspectRatioContainer/HSplitContainer/Control"]
 material = ExtResource( 7 )
 margin_right = 1880.0
 margin_bottom = 1057.0
@@ -227,18 +234,18 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Control3" type="Control" parent="Highlights/VBoxContainer/HSplitContainer"]
+[node name="Control3" type="Control" parent="Highlights/VBoxContainer/AspectRatioContainer/HSplitContainer"]
 margin_left = 952.0
 margin_right = 1880.0
-margin_bottom = 1057.0
+margin_bottom = 1057.49
 rect_clip_content = true
 mouse_filter = 2
 
-[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/HSplitContainer/Control3"]
+[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/AspectRatioContainer/HSplitContainer/Control3"]
 material = ExtResource( 7 )
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -1868.0
+margin_left = -1880.0
 margin_bottom = 1057.0
 rect_min_size = Vector2( 1880, 1057 )
 mouse_filter = 2
@@ -246,9 +253,6 @@ size_flags_horizontal = 3
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
 margin_top = 1753.0

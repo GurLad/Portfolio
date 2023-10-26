@@ -20,6 +20,7 @@ margin_bottom = 21.064
 [node name="LinkButton" type="Button"]
 margin_right = 40.0
 margin_bottom = 40.0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 theme = ExtResource( 2 )
 custom_styles/hover = SubResource( 1 )
@@ -30,7 +31,7 @@ custom_styles/normal = SubResource( 1 )
 script = ExtResource( 1 )
 url = ""
 expandTime = 0.5
-expandSize = 1.05
+expandSize = 1.1
 baseStyle = ExtResource( 4 )
 
 [connection signal="mouse_entered" from="." to="." method="OnMouseEnter"]

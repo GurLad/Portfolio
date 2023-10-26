@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/ModExample.png" type="Texture" id=7]
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/EventExample.png" type="Texture" id=8]
 [ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=9]
+[ext_resource path="res://Scripts/Icon.cs" type="Script" id=10]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0005.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 8.0
@@ -62,13 +64,13 @@ margin_bottom = 25.0
 [node name="Highlights" type="PanelContainer" parent="."]
 margin_top = 75.0
 margin_right = 1920.0
-margin_bottom = 1276.0
+margin_bottom = 1360.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1900.0
-margin_bottom = 1181.0
+margin_bottom = 1265.0
 custom_constants/separation = 20
 
 [node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
@@ -88,6 +90,7 @@ margin_bottom = 71.0
 [node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
 texture = null
 IconName = ""
+NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
 margin_right = 578.0
@@ -98,6 +101,7 @@ margin_left = 582.0
 margin_right = 646.0
 texture = null
 IconName = ""
+NumFrames = 5
 
 [node name="Links" type="CenterContainer" parent="Highlights/VBoxContainer"]
 margin_top = 91.0
@@ -175,6 +179,7 @@ margin_bottom = 71.0
 [node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
 texture = null
 IconName = ""
+NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
 margin_right = 788.0
@@ -185,6 +190,7 @@ margin_left = 792.0
 margin_right = 856.0
 texture = null
 IconName = ""
+NumFrames = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer"]
 margin_top = 372.0
@@ -246,6 +252,7 @@ margin_bottom = 71.0
 [node name="IconL" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="0"]
 texture = null
 IconName = ""
+NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
 margin_right = 998.0
@@ -256,11 +263,27 @@ margin_left = 1002.0
 margin_right = 1066.0
 texture = null
 IconName = ""
+NumFrames = 5
 
-[node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
+[node name="IconL" type="TextureRect" parent="Highlights/VBoxContainer"]
+material = ExtResource( 9 )
 margin_top = 1024.0
 margin_right = 1880.0
-margin_bottom = 1161.0
+margin_bottom = 1088.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 10 )
+IconName = "HueShift"
+Path = "res://Textures/Games/FrogmanMagmaborn"
+NumFrames = 12
+Rate = 1.25
+
+[node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 1108.0
+margin_right = 1880.0
+margin_bottom = 1245.0
 text = "I thought that limiting myself to the original NES's resolution (256x240) and palette system (4 sprite palettes & 4 background palettes, each with 4 colours) would be an interesting challenge, so I wrote some shaders to enforce them. I did not implement the max-8-sprites-per-scanline limitation though, mostly because I felt it would lead to worse UI.
 
 However, these limitations ended up having some advantages: for example, the palettes being shared between all sprites on screen made it relatively easy to create fade or hue shifting effects.
@@ -268,9 +291,9 @@ I also created a camera upscaling shader (like the ones used in some emulators),
 autowrap = true
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 1326.0
+margin_top = 1410.0
 margin_right = 1920.0
-margin_bottom = 1351.0
+margin_bottom = 1435.0
 
 [editable path="Highlights/VBoxContainer/Title"]
 [editable path="Highlights/VBoxContainer/Title2"]

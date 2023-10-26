@@ -5,18 +5,11 @@ using System;
 public class AnimationController : Node
 {
     // Use consts instead of autoload so that it will work in the editor as well
-    private const int NUM_FRAMES = 5;
-    private const int ICON_OFFSET = 3;
-    private const float RATE = 5;
+    public const int NUM_FRAMES = 5;
+    public const int ICON_OFFSET = 3;
+    public const float RATE = 5;
 
-    public static int CurrentFrame
-    {
-        get
-        {
-            float time = (float)Time.GetTicksMsec() / 1000;
-            return (Mathf.FloorToInt(time * RATE) + ICON_OFFSET) % NUM_FRAMES;
-        }
-    }
+    public static int CurrentFrame => GetCurrentFrame(NUM_FRAMES, RATE, ICON_OFFSET);
     private static AnimationController current;
 
     [Export]
@@ -41,6 +34,20 @@ public class AnimationController : Node
     public override void _Process(float delta)
     {
         base._Process(delta);
-        noiseMaterial.SetShaderParam("currentFrame", (CurrentFrame + NUM_FRAMES - ICON_OFFSET));
+        noiseMaterial.SetShaderParam("currentFrame", GetCurrentFrame(NUM_FRAMES, RATE));
+    }
+
+    public static int GetCurrentFrame(int numFrames, float rate, int offset = 0)
+    {
+        if (numFrames <= 0)
+        {
+            numFrames = NUM_FRAMES;
+        }
+        if (rate <= 0)
+        {
+            rate = RATE;
+        }
+        float time = (float)Time.GetTicksMsec() / 1000;
+        return (Mathf.FloorToInt(time * rate) + offset) % numFrames;
     }
 }

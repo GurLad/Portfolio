@@ -1,9 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Textures/BasicPanel.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/LinkButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Clips/FrogmanMagmabornPortraitEditor.ogv" type="VideoStream" id=5]
+[ext_resource path="res://Scenes/VideoPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/ModExample.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/EventExample.png" type="Texture" id=8]
+[ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=9]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 8.0
@@ -57,13 +62,13 @@ margin_bottom = 25.0
 [node name="Highlights" type="PanelContainer" parent="."]
 margin_top = 75.0
 margin_right = 1920.0
-margin_bottom = 872.0
+margin_bottom = 1276.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1900.0
-margin_bottom = 777.0
+margin_bottom = 1181.0
 custom_constants/separation = 20
 
 [node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
@@ -181,10 +186,42 @@ margin_right = 856.0
 texture = null
 IconName = ""
 
-[node name="Text2" type="Label" parent="Highlights/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer"]
 margin_top = 372.0
 margin_right = 1880.0
-margin_bottom = 509.0
+margin_bottom = 756.0
+
+[node name="VideoPlayer" parent="Highlights/VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
+margin_left = 64.0
+margin_right = 560.0
+margin_bottom = 384.0
+rect_min_size = Vector2( 0, 380 )
+stream = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer"]
+material = ExtResource( 9 )
+margin_left = 628.0
+margin_right = 1252.0
+margin_bottom = 384.0
+size_flags_horizontal = 7
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer"]
+material = ExtResource( 9 )
+margin_left = 1256.0
+margin_right = 1880.0
+margin_bottom = 384.0
+size_flags_horizontal = 7
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Text2" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 776.0
+margin_right = 1880.0
+margin_bottom = 913.0
 text = "Pretty much all the content of the game is stored in json/txt/png/ogg files, and can be edited using a dedicated modding tool - Frog Forge.
 I created it alongside the core game, and used it myself to create all maps, classes, characters, events, etc. in the game.
 
@@ -194,9 +231,9 @@ autowrap = true
 [node name="Title3" parent="Highlights/VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 529.0
+margin_top = 933.0
 margin_right = 1880.0
-margin_bottom = 600.0
+margin_bottom = 1004.0
 Text = "Mimicing (some) NES limitations"
 Icon = ""
 
@@ -221,19 +258,19 @@ texture = null
 IconName = ""
 
 [node name="Text3" type="Label" parent="Highlights/VBoxContainer"]
-margin_top = 620.0
+margin_top = 1024.0
 margin_right = 1880.0
-margin_bottom = 757.0
-text = "I thought that limiting myself to the original NES's resolution (256x240) and palette system (4 sprite palettes & 4 background palettes, each with 4 colours. I did not implement the max-8-sprites-per-scanline limitation though, mostly because I felt it would lead to worse UI) would be an interesting challenge, so I wrote some shaders to enforce them.
+margin_bottom = 1161.0
+text = "I thought that limiting myself to the original NES's resolution (256x240) and palette system (4 sprite palettes & 4 background palettes, each with 4 colours) would be an interesting challenge, so I wrote some shaders to enforce them. I did not implement the max-8-sprites-per-scanline limitation though, mostly because I felt it would lead to worse UI.
 
 However, these limitations ended up having some advantages: for example, the palettes being shared between all sprites on screen made it relatively easy to create fade or hue shifting effects.
 I also created a camera upscaling shader (like the ones used in some emulators), which was a fun challenge."
 autowrap = true
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 922.0
+margin_top = 1326.0
 margin_right = 1920.0
-margin_bottom = 947.0
+margin_bottom = 1351.0
 
 [editable path="Highlights/VBoxContainer/Title"]
 [editable path="Highlights/VBoxContainer/Title2"]

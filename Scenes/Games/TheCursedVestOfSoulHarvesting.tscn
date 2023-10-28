@@ -73,9 +73,9 @@ Text = "The Cursed Vest of Soul Harvesting"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
-margin_left = 362.0
+margin_left = 336.0
 margin_top = 0.0
-margin_right = 1518.0
+margin_right = 1544.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
@@ -83,12 +83,12 @@ texture = null
 IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
-margin_right = 1088.0
+margin_right = 1114.0
 text = "The Cursed Vest of Soul Harvesting"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
-margin_left = 1092.0
-margin_right = 1156.0
+margin_left = 1144.0
+margin_right = 1208.0
 texture = null
 IconName = ""
 
@@ -145,9 +145,9 @@ Text = "Animations -> Actions -> Units"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
-margin_left = 422.0
+margin_left = 396.0
 margin_top = 0.0
-margin_right = 1458.0
+margin_right = 1484.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
@@ -155,12 +155,12 @@ texture = null
 IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
-margin_right = 968.0
+margin_right = 994.0
 text = "Animations -> Actions -> Units"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
-margin_left = 972.0
-margin_right = 1036.0
+margin_left = 1024.0
+margin_right = 1088.0
 texture = null
 IconName = ""
 
@@ -208,9 +208,9 @@ Text = "A custom LDtk importer"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title3" index="0"]
-margin_left = 542.0
+margin_left = 516.0
 margin_top = 0.0
-margin_right = 1338.0
+margin_right = 1364.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="0"]
@@ -218,12 +218,12 @@ texture = null
 IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
-margin_right = 728.0
+margin_right = 754.0
 text = "A custom LDtk importer"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="2"]
-margin_left = 732.0
-margin_right = 796.0
+margin_left = 784.0
+margin_right = 848.0
 texture = null
 IconName = ""
 

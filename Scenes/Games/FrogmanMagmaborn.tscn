@@ -10,9 +10,9 @@
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/EventExample.png" type="Texture" id=8]
 [ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=9]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0044.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0000.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Upscale/0000.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Upscale/0001.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0041.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0006.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 8.0
@@ -84,9 +84,9 @@ Text = "Frogman Magmaborn"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
-margin_left = 617.0
+margin_left = 591.0
 margin_top = 0.0
-margin_right = 1263.0
+margin_right = 1289.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
@@ -94,12 +94,12 @@ texture = null
 IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
-margin_right = 578.0
+margin_right = 604.0
 text = "Frogman Magmaborn"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
-margin_left = 582.0
-margin_right = 646.0
+margin_left = 634.0
+margin_right = 698.0
 texture = null
 IconName = ""
 
@@ -171,9 +171,9 @@ Text = "Designed for moddability"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
-margin_left = 512.0
+margin_left = 486.0
 margin_top = 0.0
-margin_right = 1368.0
+margin_right = 1394.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
@@ -182,12 +182,12 @@ IconName = ""
 NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
-margin_right = 788.0
+margin_right = 814.0
 text = "Designed for moddability"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
-margin_left = 792.0
-margin_right = 856.0
+margin_left = 844.0
+margin_right = 908.0
 texture = null
 IconName = ""
 NumFrames = 5
@@ -244,9 +244,9 @@ Text = "Mimicing (some) NES limitations"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title3" index="0"]
-margin_left = 407.0
+margin_left = 381.0
 margin_top = 0.0
-margin_right = 1473.0
+margin_right = 1499.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="0"]
@@ -255,12 +255,12 @@ IconName = ""
 NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
-margin_right = 998.0
+margin_right = 1024.0
 text = "Mimicing (some) NES limitations"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="2"]
-margin_left = 1002.0
-margin_right = 1066.0
+margin_left = 1054.0
+margin_right = 1118.0
 texture = null
 IconName = ""
 NumFrames = 5
@@ -277,7 +277,7 @@ margin_right = 624.0
 margin_bottom = 380.0
 rect_min_size = Vector2( 475, 380 )
 size_flags_horizontal = 3
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 10 )
@@ -293,7 +293,7 @@ margin_right = 1252.0
 margin_bottom = 380.0
 rect_min_size = Vector2( 475, 380 )
 size_flags_horizontal = 3
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 10 )
@@ -309,7 +309,7 @@ margin_right = 1880.0
 margin_bottom = 380.0
 rect_min_size = Vector2( 475, 380 )
 size_flags_horizontal = 3
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 10 )

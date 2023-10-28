@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scenes/Intro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=2]
@@ -31,6 +31,15 @@
 [ext_resource path="res://Scenes/Games/MedievalSpaceEelCollectors.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Textures/Games/MedievalSpaceEelCollectors/Thumbnail2.png" type="Texture" id=30]
 [ext_resource path="res://Textures/Games/MedievalSpaceEelCollectors/Thumbnail4.png" type="Texture" id=31]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail2.png" type="Texture" id=32]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail3.png" type="Texture" id=33]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail0.png" type="Texture" id=34]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail4.png" type="Texture" id=35]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail5.png" type="Texture" id=36]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail6.png" type="Texture" id=37]
+[ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail1.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Games/GravityBananaPart1.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Scenes/Games/ProjectClimb.tscn" type="PackedScene" id=40]
 
 [node name="Index" type="VBoxContainer"]
 margin_left = 100.0
@@ -635,6 +644,7 @@ Time = "1 Month"
 Team = "1 Solo"
 Description = "I set out to learn a new engine & language in 1 month. The result was eye wizards vs. snails."
 Color = Color( 0.7, 1, 0.945, 1 )
+GamePage = ExtResource( 40 )
 
 [node name="VBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb" index="0"]
 margin_right = 495.0
@@ -743,13 +753,14 @@ margin_bottom = 770.0
 rect_pivot_offset = Vector2( 257.5, 385 )
 GameName = "Gravity Banana:
 Part 1"
-Thumbnails = [  ]
+Thumbnails = [ ExtResource( 38 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ]
 EngineName = "Unity"
 Date = "Jan 2019"
 Time = "~1 Year"
 Team = "1+ Solo+"
 Description = "A gravity-changing banana fighting pickles with chilli peppers. What more do you need?"
 Color = Color( 1, 0.894118, 0.470588, 1 )
+GamePage = ExtResource( 39 )
 
 [node name="VBoxContainer" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1" index="0"]
 margin_right = 495.0
@@ -766,7 +777,8 @@ margin_right = 475.0
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="2"]
 margin_left = 0.0
 margin_right = 475.0
-Thumbnails = [  ]
+texture = ExtResource( 38 )
+Thumbnails = [ ExtResource( 38 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ]
 
 [node name="Sep2" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer" index="3"]
 margin_right = 475.0

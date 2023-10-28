@@ -4,7 +4,7 @@
 [ext_resource path="res://Theme/Fonts/pointfree.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
 [ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Textures/Icons/Test3/0001.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Icons/Hand/0000.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -29,24 +29,27 @@ anchor_bottom = 0.0
 margin_right = 1680.0
 margin_bottom = 71.0
 Text = "PORTFOLIO - GUR LADIZHINSKY"
+Icon = "Hand"
 
 [node name="HBoxContainer" parent="VBoxContainer/Title2" index="0"]
-margin_left = 367.0
+margin_left = 351.0
 margin_top = 0.0
-margin_right = 1313.0
+margin_right = 1329.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="VBoxContainer/Title2/HBoxContainer" index="0"]
 texture = ExtResource( 5 )
+IconName = "Hand"
 
 [node name="Title" parent="VBoxContainer/Title2/HBoxContainer" index="1"]
-margin_right = 878.0
+margin_right = 894.0
 text = "PORTFOLIO - GUR LADIZHINSKY"
 
 [node name="IconR" parent="VBoxContainer/Title2/HBoxContainer" index="2"]
-margin_left = 882.0
-margin_right = 946.0
+margin_left = 914.0
+margin_right = 978.0
 texture = ExtResource( 5 )
+IconName = "Hand"
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 visible = false

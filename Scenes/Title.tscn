@@ -4,7 +4,7 @@
 [ext_resource path="res://Theme/PointHuge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Shaders/TitleTextMat.tres" type="Material" id=3]
 [ext_resource path="res://Scenes/AnimationController.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Textures/Icons/Test3/0003.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Icons/Test3/0001.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=6]
 
 [node name="Title" type="CenterContainer"]
@@ -18,10 +18,11 @@ pathIconL = NodePath("HBoxContainer/IconL")
 pathIconR = NodePath("HBoxContainer/IconR")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 682.0
+margin_left = 656.0
 margin_top = 604.0
-margin_right = 1238.0
+margin_right = 1264.0
 margin_bottom = 675.0
+custom_constants/separation = 30
 
 [node name="IconL" type="TextureRect" parent="HBoxContainer"]
 margin_right = 64.0
@@ -35,16 +36,16 @@ IconName = "Test3"
 
 [node name="Title" type="Label" parent="HBoxContainer"]
 material = ExtResource( 3 )
-margin_left = 68.0
-margin_right = 488.0
+margin_left = 94.0
+margin_right = 514.0
 margin_bottom = 71.0
 custom_fonts/font = ExtResource( 2 )
 text = "whaterrorerror"
 align = 1
 
 [node name="IconR" type="TextureRect" parent="HBoxContainer"]
-margin_left = 492.0
-margin_right = 556.0
+margin_left = 544.0
+margin_right = 608.0
 margin_bottom = 71.0
 rect_min_size = Vector2( 64, 64 )
 texture = ExtResource( 5 )

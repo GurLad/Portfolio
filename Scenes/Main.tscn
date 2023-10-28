@@ -10,7 +10,7 @@
 [ext_resource path="res://Shaders/ScollingStars3.tres" type="Material" id=8]
 [ext_resource path="res://Scripts/SceneController.cs" type="Script" id=9]
 [ext_resource path="res://Scripts/BackButton.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Button/Button.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Icons/BackArrow/0000.png" type="Texture" id=11]
 
 [node name="Main" type="Node"]
 
@@ -51,7 +51,7 @@ anchor_bottom = 1.0
 script = ExtResource( 9 )
 transitionTime = 1.0
 pathScenesNode = NodePath("ScrollContainer/MarginContainer")
-pathBackButton = NodePath("TextureButton")
+pathBackButton = NodePath("BackArrow")
 pathFirstScene = NodePath("ScrollContainer/MarginContainer/Index")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Holder"]
@@ -68,7 +68,7 @@ custom_constants/margin_left = 100
 [node name="Index" parent="Holder/ScrollContainer/MarginContainer" instance=ExtResource( 1 )]
 margin_bottom = 2437.0
 
-[node name="TextureButton" type="TextureButton" parent="Holder"]
+[node name="BackArrow" type="TextureButton" parent="Holder"]
 margin_right = 40.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 11 )
@@ -76,4 +76,4 @@ script = ExtResource( 10 )
 pathIndex = NodePath("../ScrollContainer/MarginContainer/Index")
 showTime = 0.5
 
-[connection signal="pressed" from="Holder/TextureButton" to="Holder/TextureButton" method="Click"]
+[connection signal="pressed" from="Holder/BackArrow" to="Holder/BackArrow" method="Click"]

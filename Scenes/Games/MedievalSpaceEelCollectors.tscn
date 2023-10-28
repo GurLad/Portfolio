@@ -67,9 +67,9 @@ Text = "Medieval Space Eel Collectors"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
-margin_left = 437.0
+margin_left = 411.0
 margin_top = 0.0
-margin_right = 1443.0
+margin_right = 1469.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
@@ -77,12 +77,12 @@ texture = null
 IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
-margin_right = 938.0
+margin_right = 964.0
 text = "Medieval Space Eel Collectors"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
-margin_left = 942.0
-margin_right = 1006.0
+margin_left = 994.0
+margin_right = 1058.0
 texture = null
 IconName = ""
 
@@ -141,9 +141,9 @@ Text = "Creating events inside the Unity editor"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
-margin_left = 287.0
+margin_left = 261.0
 margin_top = 0.0
-margin_right = 1593.0
+margin_right = 1619.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
@@ -151,12 +151,12 @@ texture = null
 IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
-margin_right = 1238.0
+margin_right = 1264.0
 text = "Creating events inside the Unity editor"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
-margin_left = 1242.0
-margin_right = 1306.0
+margin_left = 1294.0
+margin_right = 1358.0
 texture = null
 IconName = ""
 
@@ -168,9 +168,8 @@ rect_min_size = Vector2( 0, 657 )
 
 [node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer"]
 material = ExtResource( 4 )
-margin_right = 1200.0
+margin_right = 1308.0
 margin_bottom = 657.0
-rect_min_size = Vector2( 1200, 0 )
 size_flags_horizontal = 7
 texture = ExtResource( 5 )
 expand = true
@@ -178,12 +177,11 @@ stretch_mode = 6
 
 [node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer"]
 material = ExtResource( 4 )
-margin_left = 1204.0
+margin_left = 1312.0
 margin_right = 1880.0
 margin_bottom = 657.0
-size_flags_horizontal = 7
+size_flags_horizontal = 5
 texture = ExtResource( 3 )
-expand = true
 stretch_mode = 6
 
 [node name="Text2" type="Label" parent="Highlights/VBoxContainer"]

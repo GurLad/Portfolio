@@ -7,6 +7,10 @@ public class BackButton : Control
     private NodePath pathIndex;
     [Export]
     private float showTime;
+    [Export]
+    private float expandTime;
+    [Export]
+    private float expandSize;
 
     private Interpolator interpolator = new Interpolator();
     private bool active;
@@ -20,6 +24,7 @@ public class BackButton : Control
         index = GetNode<Control>(pathIndex);
         showDist = RectSize.y;
         RectPosition = new Vector2(0, -showDist);
+        RectPivotOffset = RectSize / 2;
     }
 
     public void ShowButton()
@@ -48,8 +53,35 @@ public class BackButton : Control
     {
         if (active)
         {
+            OnMouseLeave();
             active = false;
             SceneController.Current.TransitionToOldScene(index);
+        }
+    }
+
+    public void OnMouseEnter()
+    {
+        if (active)
+        {
+            interpolator.Interpolate(expandTime,
+                new Interpolator.InterpolateObject(
+                    (a) => RectScale = Vector2.One * a,
+                    RectScale.x,
+                    expandSize,
+                    Easing.EaseOutQuart));
+        }
+    }
+
+    public void OnMouseLeave()
+    {
+        if (active)
+        {
+            interpolator.Interpolate(expandTime,
+                new Interpolator.InterpolateObject(
+                    (a) => RectScale = Vector2.One * a,
+                    RectScale.x,
+                    1,
+                    Easing.EaseOutQuart));
         }
     }
 }

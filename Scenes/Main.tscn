@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Index.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/BG/BG.png" type="Texture" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://Shaders/ScollingStars3.tres" type="Material" id=8]
 [ext_resource path="res://Scripts/SceneController.cs" type="Script" id=9]
 [ext_resource path="res://Scripts/BackButton.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Icons/BackArrow/0000.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Icons/BackArrow/0003.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Icon.cs" type="Script" id=12]
 
 [node name="Main" type="Node"]
 
@@ -71,9 +72,20 @@ margin_bottom = 2437.0
 [node name="BackArrow" type="TextureButton" parent="Holder"]
 margin_right = 40.0
 margin_bottom = 40.0
-texture_normal = ExtResource( 11 )
+rect_min_size = Vector2( 64, 64 )
 script = ExtResource( 10 )
 pathIndex = NodePath("../ScrollContainer/MarginContainer/Index")
 showTime = 0.5
+expandTime = 0.5
+expandSize = 1.2
 
+[node name="TextureRect" type="TextureRect" parent="Holder/BackArrow"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+IconName = "BackArrow"
+
+[connection signal="mouse_entered" from="Holder/BackArrow" to="Holder/BackArrow" method="OnMouseEnter"]
+[connection signal="mouse_exited" from="Holder/BackArrow" to="Holder/BackArrow" method="OnMouseLeave"]
 [connection signal="pressed" from="Holder/BackArrow" to="Holder/BackArrow" method="Click"]

@@ -17,14 +17,14 @@
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/ThumbnailAlt4.png" type="Texture" id=15]
 [ext_resource path="res://Textures/Games/ProjectClimb/Thumbnail.png" type="Texture" id=16]
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/ThumbnailAlt5.png" type="Texture" id=17]
-[ext_resource path="res://Textures/Icons/Clock/0003.png" type="Texture" id=18]
-[ext_resource path="res://Textures/Icons/Star/0003.png" type="Texture" id=19]
-[ext_resource path="res://Textures/Icons/Team/0003.png" type="Texture" id=20]
-[ext_resource path="res://Textures/Icons/Date/0003.png" type="Texture" id=21]
-[ext_resource path="res://Textures/Icons/Godot/0003.png" type="Texture" id=22]
-[ext_resource path="res://Textures/Icons/Unity/0003.png" type="Texture" id=23]
-[ext_resource path="res://Textures/Icons/Frog/0003.png" type="Texture" id=24]
-[ext_resource path="res://Textures/Icons/Heaps.io/0003.png" type="Texture" id=25]
+[ext_resource path="res://Textures/Icons/Star/0004.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Icons/Unity/0004.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Icons/Date/0004.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Icons/Team/0004.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Icons/Godot/0004.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Icons/Clock/0004.png" type="Texture" id=23]
+[ext_resource path="res://Textures/Icons/Solo/0004.png" type="Texture" id=24]
+[ext_resource path="res://Textures/Icons/Heaps.io/0004.png" type="Texture" id=25]
 [ext_resource path="res://Scenes/Games/FrogmanMagmaborn.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scenes/Games/TheCursedVestOfSoulHarvesting.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Textures/Games/MedievalSpaceEelCollectors/Thumbnail3.png" type="Texture" id=28]
@@ -40,7 +40,7 @@
 [ext_resource path="res://Textures/Games/GravityBananaPart1/Thumbnail1.png" type="Texture" id=38]
 [ext_resource path="res://Scenes/Games/GravityBananaPart1.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Scenes/Games/ProjectClimb.tscn" type="PackedScene" id=40]
-[ext_resource path="res://Textures/Icons/Solo/0003.png" type="Texture" id=41]
+[ext_resource path="res://Textures/Icons/Frog/0004.png" type="Texture" id=41]
 [ext_resource path="res://Textures/Games/ProjectClimb/Thumbnail4.png" type="Texture" id=42]
 [ext_resource path="res://Textures/Games/ProjectClimb/Thumbnail3.png" type="Texture" id=43]
 [ext_resource path="res://Textures/Games/ProjectClimb/Thumbnail2.png" type="Texture" id=44]
@@ -91,7 +91,7 @@ margin_right = 1078.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 IconName = "Star"
 
 [node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
@@ -101,7 +101,7 @@ text = "Highlights"
 [node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
 margin_left = 424.0
 margin_right = 488.0
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 IconName = "Star"
 
 [node name="Text" type="Label" parent="Highlights/VBoxContainer"]
@@ -167,7 +167,7 @@ Text = " Unity"
 IconName = "Unity"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/EngineData" index="0"]
-texture = ExtResource( 23 )
+texture = ExtResource( 19 )
 IconName = "Unity"
 
 [node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/EngineData" index="1"]
@@ -179,7 +179,7 @@ margin_right = 457.0
 Text = "Aug 2023"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/DateData" index="0"]
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Aug"
@@ -199,7 +199,7 @@ margin_right = 217.0
 Text = "~3 Years"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TimeData" index="0"]
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "~3"
@@ -214,7 +214,7 @@ margin_right = 457.0
 Text = "1+ Solo+"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/FrogmanMagmaborn/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
 text = "1+"
@@ -293,7 +293,7 @@ margin_right = 457.0
 Text = "Jan 2023"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/DateData" index="0"]
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Jan"
@@ -313,7 +313,7 @@ margin_right = 217.0
 Text = "2 Days"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TimeData" index="0"]
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "2"
@@ -329,7 +329,7 @@ Text = "1 Solo"
 IconName = "Solo"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 41 )
+texture = ExtResource( 24 )
 IconName = "Solo"
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/CursedVest/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
@@ -397,7 +397,7 @@ Text = " Unity"
 IconName = "Unity"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData" index="0"]
-texture = ExtResource( 23 )
+texture = ExtResource( 19 )
 IconName = "Unity"
 
 [node name="Text" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/EngineData" index="1"]
@@ -409,7 +409,7 @@ margin_right = 457.0
 Text = "Nov 2022"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData" index="0"]
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Nov"
@@ -429,7 +429,7 @@ margin_right = 217.0
 Text = "8 Hours"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData" index="0"]
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "8"
@@ -444,7 +444,7 @@ margin_right = 457.0
 Text = "3 Team"
 
 [node name="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 
 [node name="Number" parent="Highlights/VBoxContainer/HBoxContainer/SpaceEel/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
 text = "3"
@@ -493,7 +493,7 @@ margin_right = 1123.0
 margin_bottom = 71.0
 
 [node name="IconL" parent="OlderStuff/VBoxContainer/Title/HBoxContainer" index="0"]
-texture = ExtResource( 24 )
+texture = ExtResource( 41 )
 IconName = "Frog"
 
 [node name="Title" parent="OlderStuff/VBoxContainer/Title/HBoxContainer" index="1"]
@@ -503,7 +503,7 @@ text = "More Projects"
 [node name="IconR" parent="OlderStuff/VBoxContainer/Title/HBoxContainer" index="2"]
 margin_left = 514.0
 margin_right = 578.0
-texture = ExtResource( 24 )
+texture = ExtResource( 41 )
 IconName = "Frog"
 
 [node name="Text" type="Label" parent="OlderStuff/VBoxContainer"]
@@ -579,7 +579,7 @@ margin_right = 457.0
 Text = "Oct 2023"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/MyPortfolio/VBoxContainer/HBoxContainer/DateData" index="0"]
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/MyPortfolio/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Oct"
@@ -599,7 +599,7 @@ margin_right = 217.0
 Text = "12 Days"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/MyPortfolio/VBoxContainer/HBoxContainer2/TimeData" index="0"]
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/MyPortfolio/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "12"
@@ -615,7 +615,7 @@ Text = "1 Solo"
 IconName = "Solo"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/MyPortfolio/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 41 )
+texture = ExtResource( 24 )
 IconName = "Solo"
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/MyPortfolio/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
@@ -693,7 +693,7 @@ margin_right = 457.0
 Text = "Jun 2021"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/DateData" index="0"]
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Jun"
@@ -713,7 +713,7 @@ margin_right = 217.0
 Text = "1 Month"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TimeData" index="0"]
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "1"
@@ -729,7 +729,7 @@ Text = "1 Solo"
 IconName = "Solo"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 41 )
+texture = ExtResource( 24 )
 IconName = "Solo"
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/ProjectClimb/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
@@ -797,7 +797,7 @@ Text = " Unity"
 IconName = "Unity"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/EngineData" index="0"]
-texture = ExtResource( 23 )
+texture = ExtResource( 19 )
 IconName = "Unity"
 
 [node name="Text" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/EngineData" index="1"]
@@ -809,7 +809,7 @@ margin_right = 457.0
 Text = "Jan 2019"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/DateData" index="0"]
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer/DateData/TextureRect" index="0"]
 text = "Jan"
@@ -829,7 +829,7 @@ margin_right = 217.0
 Text = "~1 Year"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TimeData" index="0"]
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TimeData/TextureRect" index="0"]
 text = "~1"
@@ -844,7 +844,7 @@ margin_right = 457.0
 Text = "1+ Solo+"
 
 [node name="TextureRect" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TeamData" index="0"]
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 
 [node name="Number" parent="OlderStuff/VBoxContainer/HBoxContainer/GBP1/VBoxContainer/HBoxContainer2/TeamData/TextureRect" index="0"]
 text = "1+"

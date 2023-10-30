@@ -1,0 +1,209 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Textures/BasicPanel.png" type="Texture" id=1]
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Clips/SpacePhantasyShort.ogv" type="VideoStream" id=3]
+[ext_resource path="res://Scenes/VideoPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=5]
+[ext_resource path="res://Textures/Games/SpacePhantasy/Screenshot1a.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Games/SpacePhantasy/Screenshot2.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/LinkButton.tscn" type="PackedScene" id=11]
+
+[sub_resource type="StyleBoxTexture" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.152941, 0.152941, 0.211765, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 19.8039
+margin_right = 15.376
+margin_top = 21.6328
+margin_bottom = 21.064
+modulate_color = Color( 0.729412, 0.380392, 0.337255, 1 )
+
+[node name="ProjectClimb" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+custom_constants/separation = 50
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 25.0
+
+[node name="Highlights" type="PanelContainer" parent="."]
+margin_top = 75.0
+margin_right = 1920.0
+margin_bottom = 828.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Highlights"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1900.0
+margin_bottom = 733.0
+mouse_filter = 2
+custom_constants/separation = 20
+
+[node name="Title" parent="Highlights/VBoxContainer" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1880.0
+margin_bottom = 71.0
+Text = "Space Phantasy XIV - Disc 5"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title" index="0"]
+margin_left = 441.0
+margin_top = 0.0
+margin_right = 1439.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="1"]
+margin_right = 904.0
+text = "Space Phantasy XIV - Disc 5"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title/HBoxContainer" index="2"]
+margin_left = 934.0
+margin_right = 998.0
+texture = null
+IconName = ""
+
+[node name="Links" type="CenterContainer" parent="Highlights/VBoxContainer"]
+margin_top = 91.0
+margin_right = 1880.0
+margin_bottom = 132.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer/Links"]
+margin_left = 820.0
+margin_right = 1059.0
+margin_bottom = 41.0
+custom_constants/separation = 20
+
+[node name="GitHub" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 11 )]
+margin_right = 84.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "GitHub"
+color = Color( 0.152941, 0.152941, 0.211765, 1 )
+url = "https://github.com/GurLad/MedievalSpaceShips"
+
+[node name="LudumDare" parent="Highlights/VBoxContainer/Links/HBoxContainer" instance=ExtResource( 11 )]
+margin_left = 104.0
+margin_right = 239.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+text = "Ludum Dare"
+color = Color( 0.729412, 0.380392, 0.337255, 1 )
+url = "https://ldjam.com/events/ludum-dare/54/space-phantasy-xiv-disc-5"
+
+[node name="Text" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 152.0
+margin_right = 1880.0
+margin_bottom = 177.0
+text = "TBA"
+autowrap = true
+
+[node name="Title2" parent="Highlights/VBoxContainer" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 197.0
+margin_right = 1880.0
+margin_bottom = 268.0
+Text = "A complete boss fight"
+Icon = ""
+
+[node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
+margin_left = 531.0
+margin_top = 0.0
+margin_right = 1349.0
+margin_bottom = 71.0
+
+[node name="IconL" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="0"]
+texture = null
+IconName = ""
+
+[node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
+margin_right = 724.0
+text = "A complete boss fight"
+
+[node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
+margin_left = 754.0
+margin_right = 818.0
+texture = null
+IconName = ""
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Highlights/VBoxContainer"]
+margin_top = 288.0
+margin_right = 1880.0
+margin_bottom = 668.0
+rect_min_size = Vector2( 0, 380 )
+
+[node name="TextureRect2" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer"]
+material = ExtResource( 5 )
+margin_right = 624.0
+margin_bottom = 380.0
+size_flags_horizontal = 7
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="VideoPlayer" parent="Highlights/VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 723.0
+margin_right = 1157.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 434, 380 )
+stream = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="Highlights/VBoxContainer/HBoxContainer"]
+material = ExtResource( 5 )
+margin_left = 1256.0
+margin_right = 1880.0
+margin_bottom = 380.0
+size_flags_horizontal = 7
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Text2" type="Label" parent="Highlights/VBoxContainer"]
+margin_top = 688.0
+margin_right = 1880.0
+margin_bottom = 713.0
+text = "TBA"
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 878.0
+margin_right = 1920.0
+margin_bottom = 903.0
+
+[editable path="Highlights/VBoxContainer/Title"]
+[editable path="Highlights/VBoxContainer/Title2"]

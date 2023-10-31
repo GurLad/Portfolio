@@ -14,6 +14,8 @@ public class SceneController : Control
     private NodePath pathBackButton;
     [Export]
     private NodePath pathFirstScene;
+    [Export]
+    private NodePath pathScrollContainer;
 
     private State state;
     private Control currentScene = null;
@@ -22,6 +24,9 @@ public class SceneController : Control
     private Timer timer = new Timer();
     private Node scenesNode;
     private BackButton backButton;
+    private ScrollContainer scrollContainer;
+    private int oldScroll = 0;
+    private bool updateOldScroll = false; // Bad fix
 
     public override void _Ready()
     {
@@ -33,6 +38,7 @@ public class SceneController : Control
         scenesNode = GetNode(pathScenesNode);
         backButton = GetNode<BackButton>(pathBackButton);
         currentScene = GetNode<Control>(pathFirstScene);
+        scrollContainer = GetNode<ScrollContainer>(pathScrollContainer);
     }
 
     public override void _Process(float delta)
@@ -50,6 +56,11 @@ public class SceneController : Control
                 }
                 break;
             case State.FadeIn:
+                if (updateOldScroll)
+                {
+                    scrollContainer.ScrollVertical = oldScroll;
+                    updateOldScroll = false;
+                }
                 currentScene.Modulate = new Color(currentScene.Modulate, timer.Percent());
                 if (timer.TimeLeft <= 0)
                 {
@@ -101,6 +112,9 @@ public class SceneController : Control
             scenesNode.AddChild(currentScene = scene.Instance<Control>());
             currentScene.Modulate = new Color(currentScene.Modulate, 0);
             backButton.ShowButton();
+            oldScroll = scrollContainer.ScrollVertical;
+            GD.Print(oldScroll);
+            scrollContainer.ScrollVertical = 0;
         }, null);
     }
 
@@ -119,6 +133,7 @@ public class SceneController : Control
             currentScene = scene;
             currentScene.Modulate = new Color(currentScene.Modulate, 0);
             backButton.HideButton();
+            updateOldScroll = true;
         }, null);
     }
 

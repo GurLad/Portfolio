@@ -10,7 +10,7 @@
 [ext_resource path="res://Shaders/ScollingStars3.tres" type="Material" id=8]
 [ext_resource path="res://Scripts/SceneController.cs" type="Script" id=9]
 [ext_resource path="res://Scripts/BackButton.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Icons/BackArrow/0002.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Icons/BackArrow/0004.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=12]
 
 [node name="Main" type="Node"]
@@ -54,6 +54,7 @@ transitionTime = 1.0
 pathScenesNode = NodePath("ScrollContainer/MarginContainer")
 pathBackButton = NodePath("BackArrow")
 pathFirstScene = NodePath("ScrollContainer/MarginContainer/Index")
+pathScrollContainer = NodePath("ScrollContainer")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Holder"]
 anchor_right = 1.0

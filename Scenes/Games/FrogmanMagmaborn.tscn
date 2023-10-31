@@ -11,8 +11,8 @@
 [ext_resource path="res://Shaders/RoundCornersMat.tres" type="Material" id=9]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=10]
 [ext_resource path="res://Textures/Games/FrogmanMagmaborn/Upscale/0001.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0041.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0006.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/Fade/0032.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Games/FrogmanMagmaborn/HueShift/0011.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 8.0

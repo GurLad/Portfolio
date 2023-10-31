@@ -17,7 +17,7 @@ noise = SubResource( 3 )
 
 [resource]
 shader = ExtResource( 1 )
-shader_param/currentFrame = 1
+shader_param/currentFrame = 2
 shader_param/numFrames = 5
 shader_param/noiseStrength = 5.0
 shader_param/noiseX = SubResource( 2 )

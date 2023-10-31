@@ -10,7 +10,7 @@
 [ext_resource path="res://Shaders/ScollingStars3.tres" type="Material" id=8]
 [ext_resource path="res://Scripts/SceneController.cs" type="Script" id=9]
 [ext_resource path="res://Scripts/BackButton.cs" type="Script" id=10]
-[ext_resource path="res://Textures/Icons/BackArrow/0004.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Icons/BackArrow/0002.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Icon.cs" type="Script" id=12]
 
 [node name="Main" type="Node"]
@@ -61,13 +61,13 @@ anchor_bottom = 1.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Holder/ScrollContainer"]
 margin_right = 1908.0
-margin_bottom = 2437.0
+margin_bottom = 2512.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
 [node name="Index" parent="Holder/ScrollContainer/MarginContainer" instance=ExtResource( 1 )]
-margin_bottom = 2437.0
+margin_bottom = 2512.0
 
 [node name="BackArrow" type="TextureButton" parent="Holder"]
 margin_right = 40.0

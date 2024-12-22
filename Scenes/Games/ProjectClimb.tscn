@@ -136,7 +136,7 @@ anchor_bottom = 0.0
 margin_top = 309.0
 margin_right = 1880.0
 margin_bottom = 380.0
-Text = "Custom physics & entity systems"
+Text = "Custom Physics & Entity systems"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
@@ -151,7 +151,7 @@ IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
 margin_right = 1024.0
-text = "Custom physics & entity systems"
+text = "Custom Physics & Entity systems"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
 margin_left = 1054.0

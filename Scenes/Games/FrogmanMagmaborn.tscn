@@ -167,7 +167,7 @@ anchor_bottom = 0.0
 margin_top = 281.0
 margin_right = 1880.0
 margin_bottom = 352.0
-Text = "Designed for moddability"
+Text = "Designed for Moddability"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
@@ -183,7 +183,7 @@ NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
 margin_right = 814.0
-text = "Designed for moddability"
+text = "Designed for Moddability"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
 margin_left = 844.0
@@ -240,7 +240,7 @@ anchor_bottom = 0.0
 margin_top = 933.0
 margin_right = 1880.0
 margin_bottom = 1004.0
-Text = "Mimicing (some) NES limitations"
+Text = "Mimicing (some) NES Limitations"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title3" index="0"]
@@ -256,7 +256,7 @@ NumFrames = 5
 
 [node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
 margin_right = 1024.0
-text = "Mimicing (some) NES limitations"
+text = "Mimicing (some) NES Limitations"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="2"]
 margin_left = 1054.0

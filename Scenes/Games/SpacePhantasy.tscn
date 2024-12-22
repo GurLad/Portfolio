@@ -137,7 +137,7 @@ anchor_bottom = 0.0
 margin_top = 225.0
 margin_right = 1880.0
 margin_bottom = 296.0
-Text = "A complete boss fight"
+Text = "A Complete Boss Fight"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title2" index="0"]
@@ -152,7 +152,7 @@ IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="1"]
 margin_right = 724.0
-text = "A complete boss fight"
+text = "A Complete Boss Fight"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title2/HBoxContainer" index="2"]
 margin_left = 754.0

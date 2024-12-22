@@ -204,7 +204,7 @@ anchor_bottom = 0.0
 margin_top = 1117.0
 margin_right = 1880.0
 margin_bottom = 1188.0
-Text = "A custom LDtk importer"
+Text = "A Custom LDtk Importer"
 Icon = ""
 
 [node name="HBoxContainer" parent="Highlights/VBoxContainer/Title3" index="0"]
@@ -219,7 +219,7 @@ IconName = ""
 
 [node name="Title" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="1"]
 margin_right = 754.0
-text = "A custom LDtk importer"
+text = "A Custom LDtk Importer"
 
 [node name="IconR" parent="Highlights/VBoxContainer/Title3/HBoxContainer" index="2"]
 margin_left = 784.0

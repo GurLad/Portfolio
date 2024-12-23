@@ -36,7 +36,7 @@ margin_top = 21.6328
 margin_bottom = 21.064
 modulate_color = Color( 0.729412, 0.380392, 0.337255, 1 )
 
-[node name="ProjectClimb" type="VBoxContainer"]
+[node name="SpacyPhantasy" type="VBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
@@ -128,7 +128,7 @@ url = "https://ldjam.com/events/ludum-dare/54/space-phantasy-xiv-disc-5"
 margin_top = 152.0
 margin_right = 1880.0
 margin_bottom = 205.0
-text = "While I prefer working on original games & characters, I also enjoy romhacking and making parodies every once in a while. This was my JRPG parody, and somehow ended up being my most well-recieved game jam entry to date - it won 5th in humor, and had a score of over 4 in most categories."
+text = "While I prefer working on original games & characters, I also enjoy romhacking and making parodies every once in a while. This was my JRPG parody, and it somehow ended up being one of my best-recieved game jam entries to date - it won 5th in humor, and had a score of over 4 in most categories."
 autowrap = true
 
 [node name="Title2" parent="Highlights/VBoxContainer" instance=ExtResource( 10 )]
